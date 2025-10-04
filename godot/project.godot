@@ -52,6 +52,7 @@ interact={
 
 2d_physics/layer_2="walls"
 2d_physics/layer_10="player"
+2d_physics/layer_12="interactable"
 
 [rendering]
 

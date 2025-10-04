@@ -1,15 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://06ul0wadfcqp"]
+[gd_scene load_steps=6 format=3 uid="uid://06ul0wadfcqp"]
 
 [ext_resource type="PackedScene" uid="uid://cqo6h223cwhjb" path="res://player/player.tscn" id="1_l1rk1"]
 [ext_resource type="PackedScene" uid="uid://bqwcj5grl1mkc" path="res://level/level.tscn" id="2_vasa2"]
 [ext_resource type="PackedScene" uid="uid://dgjsu4poy1siu" path="res://interactable/wrench.tscn" id="3_h7iqs"]
+[ext_resource type="Script" uid="uid://d1swmqartiwge" path="res://game/inventory.gd" id="4_4fuuu"]
+[ext_resource type="PackedScene" uid="uid://5yb60o2rqeis" path="res://interactable/lock_wrench.tscn" id="5_dxrkv"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_l1rk1")]
-position = Vector2(107, 186)
+position = Vector2(264, 256)
 
 [node name="Level" parent="." instance=ExtResource("2_vasa2")]
 
 [node name="Wrench" parent="." instance=ExtResource("3_h7iqs")]
-position = Vector2(399, 243)
+position = Vector2(402, 240)
+
+[node name="Inventory" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_4fuuu")
+
+[node name="LockWrench" parent="." instance=ExtResource("5_dxrkv")]
+position = Vector2(75, 241)
+
+[node name="Wrench2" parent="." instance=ExtResource("3_h7iqs")]
+position = Vector2(313, 240)

@@ -1,5 +1,22 @@
 extends CharacterBody2D
 
+var interactables_in_reach = []
+var closest_interactable = null
+
+func _ready():
+	$InteractionReach.area_entered.connect(add_interactable)
+	$InteractionReach.area_exited.connect(remove_interactable)
+
+func add_interactable(interactable):
+	if not interactable is Interactable:
+		return
+	interactables_in_reach.append(interactable)
+
+func remove_interactable(interactable):
+	if not interactable is Interactable:
+		return
+	interactables_in_reach.erase(interactable)
+
 func _process(delta: float) -> void:
 	var horizontal_velocity = 0.0
 	
@@ -16,3 +33,25 @@ func _process(delta: float) -> void:
 		velocity.y += gravity * delta
 	
 	move_and_slide()
+	
+	# Interactables
+	if interactables_in_reach.size() > 0:
+		var closest = interactables_in_reach[0]
+		if interactables_in_reach.size() > 1:
+			var closest_dist = position.distance_squared_to(closest.position)
+			for interactable in interactables_in_reach:
+				var dist = position.distance_squared_to(interactable.position)
+				if dist < closest_dist:
+					closest = interactable
+					closest_dist = dist
+		if closest != closest_interactable:
+			if closest_interactable != null:
+				closest_interactable.on_player_exit()
+			closest_interactable = closest
+			closest_interactable.on_player_enter()
+	else:
+		if closest_interactable != null:
+			closest_interactable.on_player_exit()
+			closest_interactable = null
+	if Input.is_action_just_pressed("interact") and closest_interactable != null:
+		closest_interactable.trigger()
