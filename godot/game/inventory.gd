@@ -1,17 +1,33 @@
-extends Node2D
+extends Control
 
 var items = []
+var display_items = []
+var item_scene = preload("res://game/InventoryItem.tscn")
 
 func _ready():
-	pass
+	var item_display = $Items
+	for item in item_display.get_children():
+		item.queue_free()
+	display_items.clear()
 
 func add_item(item, count=1):
 	for i in range(count):
 		items.append(item)
+		var display_item = item_scene.instantiate()
+		display_item.set_item(item)
+		display_items.append(display_item)
+		$Items.add_child(display_item)
 
 func remove_item(item, count=1):
 	for i in range(count):
-		items.erase(item)
+		if item not in items:
+			break
+		var index = items.find(item)
+		items.remove_at(index)
+		var display_item = display_items[index]
+		display_items.remove_at(index)
+		$Items.remove_child(display_item)
+		display_item.queue_free()
 
 func has_item(item, count=1):
 	var has_count = items.count(item)
