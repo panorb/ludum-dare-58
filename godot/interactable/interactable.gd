@@ -3,6 +3,9 @@ extends Area2D
 
 @export var active = true
 
+func _ready() -> void:
+	$ButtonPromptSprite.visible = false
+
 # activates interactable so that it becomes usable again
 func activate():
 	active = true

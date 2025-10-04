@@ -19,3 +19,6 @@ shape = SubResource("CircleShape2D_x5w8o")
 [node name="Wrench" type="Sprite2D" parent="." index="1"]
 position = Vector2(1, -1)
 texture = ExtResource("2_1w2do")
+
+[node name="ButtonPromptSprite" parent="." index="2"]
+visible = true
