@@ -35,8 +35,13 @@ func execute_line():
 			# TODO: Handle speaker, so that "people"/objects other than the player can speak
 			var bubble_text = current_instruction["text"]
 			$SpeechBubble.text = bubble_text
+		"item_pickup":
+			var item = current_instruction["item"]
+			%Inventory.add_item(item)
+			advance_dialog()
 		_:
-			print("Dialog encountered unknown type: '{}'".format(instruction_type))
+			print("Dialog encountered unknown type: '{0}'".format([instruction_type]))
+			advance_dialog()
 
 func advance_dialog():
 	cur_line += 1
