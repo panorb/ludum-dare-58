@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=4 format=3 uid="uid://bka84wch1et7p"]
 
-[ext_resource type="FontFile" uid="uid://yp6qk6pyxydu" path="res://ui/roboto_medium_b.ttf" id="1_udl1o"]
-[ext_resource type="FontFile" uid="uid://cdtl6dp5d5jp" path="res://ui/roboto_bold_b.ttf" id="2_vuqvt"]
-[ext_resource type="FontFile" uid="uid://l0u6iqjrbdtq" path="res://ui/roboto_mediumitalic_b.ttf" id="3_bp0j3"]
+[ext_resource type="FontFile" uid="uid://yp6qk6pyxydu" path="res://ui/roboto_medium.ttf" id="1_udl1o"]
+[ext_resource type="FontFile" uid="uid://cdtl6dp5d5jp" path="res://ui/roboto_bold.ttf" id="2_vuqvt"]
+[ext_resource type="FontFile" uid="uid://l0u6iqjrbdtq" path="res://ui/roboto_mediumitalic.ttf" id="3_bp0j3"]
 
 [resource]
 Label/font_sizes/font_size = 24
