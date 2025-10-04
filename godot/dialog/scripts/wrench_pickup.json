@@ -1,0 +1,25 @@
+[
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "What is that?"
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "...A wrench?"
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "...Might come in handy..."
+    },
+    {
+        "type": "player_animation",
+        "animation": "pickup"
+    },
+    {
+        "type": "item_pickup",
+        "item": "wrench"
+    }
+]

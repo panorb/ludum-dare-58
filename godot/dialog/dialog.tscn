@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bx3ce4kmcia3k"]
+[gd_scene load_steps=4 format=3 uid="uid://bx3ce4kmcia3k"]
 
 [ext_resource type="PackedScene" uid="uid://07cnxpbwlf1g" path="res://dialog/speech_bubble.tscn" id="1_ss5st"]
 [ext_resource type="Theme" uid="uid://bka84wch1et7p" path="res://ui/ui_theme.tres" id="1_wddsb"]
+[ext_resource type="Script" uid="uid://drndg7bsi8ahf" path="res://dialog/dialog.gd" id="2_v0ldd"]
 
 [node name="Dialog" type="Control"]
 layout_mode = 3
@@ -12,6 +13,7 @@ scale = Vector2(1.0053133, 1.0431036)
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_wddsb")
+script = ExtResource("2_v0ldd")
 
 [node name="SpeechBubble" parent="." instance=ExtResource("1_ss5st")]
 layout_mode = 0
