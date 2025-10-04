@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 	move_and_slide()
 	
 	# Interactables
-	if interactables_in_reach.size() > 0:
+	if interactables_in_reach.size() > 0 and velocity != Vector2.ZERO:
 		var closest = interactables_in_reach[0]
 		if interactables_in_reach.size() > 1:
 			var closest_dist = position.distance_squared_to(closest.position)
@@ -46,12 +46,12 @@ func _process(delta: float) -> void:
 					closest_dist = dist
 		if closest != closest_interactable:
 			if closest_interactable != null:
-				closest_interactable.on_player_exit()
+				closest_interactable.player_exit()
 			closest_interactable = closest
-			closest_interactable.on_player_enter()
-	else:
+			closest_interactable.player_enter()
+	elif interactables_in_reach.size() == 0:
 		if closest_interactable != null:
-			closest_interactable.on_player_exit()
+			closest_interactable.player_exit()
 			closest_interactable = null
 	if Input.is_action_just_pressed("interact") and closest_interactable != null:
 		closest_interactable.trigger()

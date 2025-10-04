@@ -7,16 +7,16 @@ func can_detect():
 		return false
 	return %Inventory.has_item("wrench")
 
-func can_interact():
+func can_trigger():
 	if open:
 		return false
-	print("Im a lock and I want a wrench!")
 	return %Inventory.has_item("wrench")
 
 func on_trigger():
-	if not can_interact():
-		return
 	%Inventory.remove_item("wrench")
 	print("lock open")
 	open = true
 	deactivate()
+
+func on_trigger_failed():
+	print("Ya need a wrench!")

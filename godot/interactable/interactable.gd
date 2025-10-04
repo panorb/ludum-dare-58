@@ -1,42 +1,52 @@
 class_name Interactable
 extends Area2D
 
-#func _ready() -> void:
-#	body_entered.connect(_on_player_entered)
-#	body_exited.connect(_on_player_exited)
-
 @export var active = true
 
+# activates interactable so that it becomes usable again
 func activate():
 	active = true
+	$CollisionShape2D.disabled = false
+
+# deactivates interactable, can no longer be used until re-activated
 func deactivate():
 	active = false
+	$CollisionShape2D.disabled = true
 	$ButtonPromptSprite.visible = false
 
-func can_detect():
-	print("default detect")
+# if true, show the button prompt
+func can_detect(): # overwrite in child scenes & scripts
 	return true
 
-func can_interact():
-	print("default interact")
+# if true, player can successfully interact
+func can_trigger(): # overwrite in child scenes & scripts
 	return true
 
+# what should happen when the player interacts
 func on_trigger(): # overwrite in child scenes & scripts
 	print("Trigger pressed, but behavior not overwritten!")
 
-func trigger():
-	if can_interact():
-		on_trigger()
+# what should happen if the player tries to interact, but it doesn't work
+func on_trigger_failed(): # overwrite in child scenes & scripts
+	print("Cannot interact -> not triggered")
 
-func on_player_enter():
+# try to interact with the interactable
+func trigger():
+	if can_trigger():
+		on_trigger()
+	else:
+		on_trigger_failed()
+
+# becomes targeted by player
+func player_enter():
 	if not active:
 		return
 	if not can_detect():
-		print("cannot detect")
 		return
 	$ButtonPromptSprite.visible = true
 
-func on_player_exit():
+# becomes no longer targeted by player
+func player_exit():
 	if not active:
 		return
 	$ButtonPromptSprite.visible = false
