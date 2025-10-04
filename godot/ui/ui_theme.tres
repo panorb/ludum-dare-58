@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bka84wch1et7p"]
+
+[ext_resource type="FontFile" uid="uid://yp6qk6pyxydu" path="res://ui/roboto_medium.ttf" id="1_udl1o"]
+[ext_resource type="FontFile" uid="uid://cdtl6dp5d5jp" path="res://ui/Roboto_bold.ttf" id="2_vuqvt"]
+[ext_resource type="FontFile" uid="uid://l0u6iqjrbdtq" path="res://ui/Roboto_mediumitalic.ttf" id="3_bp0j3"]
+
+[resource]
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_udl1o")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+RichTextLabel/fonts/bold_font = ExtResource("2_vuqvt")
+RichTextLabel/fonts/italics_font = ExtResource("3_bp0j3")
+RichTextLabel/fonts/normal_font = ExtResource("1_udl1o")
