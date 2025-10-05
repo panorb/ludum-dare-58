@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://06ul0wadfcqp"]
+[gd_scene load_steps=9 format=3 uid="uid://06ul0wadfcqp"]
 
 [ext_resource type="PackedScene" uid="uid://cqo6h223cwhjb" path="res://player/player.tscn" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://cyst85hplajhk" path="res://game/game.gd" id="1_u5opy"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bx3ce4kmcia3k" path="res://cutscene/dialog.tscn" id="6_dakft"]
 [ext_resource type="Script" uid="uid://l6p8ugfmx7n3" path="res://cutscene/cutscene_conductor.gd" id="6_y36n6"]
 [ext_resource type="PackedScene" uid="uid://cxdxgrvykq18t" path="res://level/level2.tscn" id="7_u5opy"]
+[ext_resource type="PackedScene" uid="uid://nlpc516xkojm" path="res://game/journal.tscn" id="7_y36n6"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_u5opy")
@@ -39,6 +40,8 @@ theme_override_constants/separation = 32
 
 [node name="Dialog" parent="CanvasLayer" instance=ExtResource("6_dakft")]
 unique_name_in_owner = true
+
+[node name="Journal" parent="CanvasLayer" instance=ExtResource("7_y36n6")]
 
 [node name="Level2" parent="." instance=ExtResource("7_u5opy")]
 position = Vector2(1270, -1)
