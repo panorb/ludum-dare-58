@@ -6,7 +6,6 @@
 
 [node name="SpeechBubble" type="MarginContainer"]
 visible = false
-anchors_preset = -1
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_3p65j")
