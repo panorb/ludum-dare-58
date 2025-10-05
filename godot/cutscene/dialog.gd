@@ -51,9 +51,9 @@ func _process(delta: float) -> void:
 	if current_speaker_node and current_speech_bubble_node:
 		var origin = camera.get_viewport_transform().origin
 		iter_print("cspn:\n\tp: {0}\n\t gp: {1}".format([current_speaker_node.position, current_speaker_node.global_position]))
-		current_speech_bubble_node.position.x = current_speaker_node.position.x - origin.x
-		current_speech_bubble_node.position.y = current_speaker_node.position.y - origin.y
-		iter_print("csbn: {0}".format([current_speech_bubble_node.position.x]))
+		current_speech_bubble_node.position = current_speaker_node.global_position + origin
+		# current_speech_bubble_node.position.y = current_speaker_node.global_position.y + origin.y
+		iter_print("box: {0}".format([current_speech_bubble_node.position]))
 		# var viewport_pos = get_viewport().get_visible_rect().position
 		# print(t)
 		# current_speech_bubble_node.position = current_speaker_node.global_position
