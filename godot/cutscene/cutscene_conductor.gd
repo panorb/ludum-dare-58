@@ -11,6 +11,7 @@ func _ready() -> void:
 		var script_text = FileAccess.get_file_as_string(cutscene_script_dir + "/" + script_file)
 		var script_json = JSON.parse_string(script_text)
 		cutscene_scripts[script_file.get_basename()] = script_json
+	add_to_group("cutscene_conductor")
 
 var advance_cooldown := 0
 var active_dialog_name : String = ""

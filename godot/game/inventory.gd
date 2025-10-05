@@ -9,6 +9,8 @@ func _ready():
 	for item in item_display.get_children():
 		item.queue_free()
 	display_items.clear()
+	add_to_group("inventory")
+	print("added to inventory")
 
 func add_item(item, count=1):
 	for i in range(count):

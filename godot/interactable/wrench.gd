@@ -1,4 +1,4 @@
 extends Interactable
 
 func on_trigger():
-	%CutsceneConductor.start_cutscene("wrench_pickup")
+	get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("wrench_pickup")

@@ -5,15 +5,15 @@ var open = false
 func can_detect():
 	if open:
 		return false
-	return %Inventory.has_item("wrench")
+	return get_tree().get_first_node_in_group("inventory").has_item("wrench")
 
 func can_trigger():
 	if open:
 		return false
-	return %Inventory.has_item("wrench")
+	return get_tree().get_first_node_in_group("inventory").has_item("wrench")
 
 func on_trigger():
-	%Inventory.remove_item("wrench")
+	get_tree().get_first_node_in_group("inventory").remove_item("wrench")
 	print("lock open")
 	open = true
 	deactivate()
