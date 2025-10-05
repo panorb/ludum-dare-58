@@ -37,7 +37,11 @@ func _process(delta: float) -> void:
 	var player : CharacterBody2D = get_tree().get_first_node_in_group("player")
 	var camera: Camera2D = get_tree().get_first_node_in_group("camera")
 	var t = get_viewport_rect()
-	iter_print(t)
+	var vp = get_viewport()
+	# iter_print("viewport:\n\t{0}\n\t{1}".format([vp,t]))
+	var window = get_window() 
+	iter_print("win: {0}".format([get_window().size]))
+	
 	# print("t: {0}".format([t]))
 	iter_print("camera:\n\tviewport_rect: {0}\n\ttransform: {1}".format([camera.get_viewport_rect(),  camera.get_viewport_transform()]))
 	iter_print("player: P:{0}, GP:{1}".format([player.position,player.global_position]))
@@ -49,9 +53,14 @@ func _process(delta: float) -> void:
 	# print(camera_topleft)
 	
 	if current_speaker_node and current_speech_bubble_node:
-		var origin = camera.get_viewport_transform().origin
+		var transform = camera.get_viewport_transform()
+		var scaled_origin = Vector2(
+			 transform.origin.x / transform.x.x ,
+			transform.origin.y / transform.y.y
+		)
 		iter_print("cspn:\n\tp: {0}\n\t gp: {1}".format([current_speaker_node.position, current_speaker_node.global_position]))
-		current_speech_bubble_node.position = current_speaker_node.global_position + origin
+		current_speech_bubble_node.position = current_speaker_node.global_position + scaled_origin
+		# current_speech_bubble_node.position.x *= transform.x
 		# current_speech_bubble_node.position.y = current_speaker_node.global_position.y + origin.y
 		iter_print("box: {0}".format([current_speech_bubble_node.position]))
 		# var viewport_pos = get_viewport().get_visible_rect().position
