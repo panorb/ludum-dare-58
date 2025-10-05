@@ -27,44 +27,39 @@ func hide_bubble():
 	# $SpeechBubble.visible = false
 
 
-var skip = 0
+var iter_print_count = 0
 func iter_print(msg):
-	if skip % 4 == 0:
+	if iter_print_count % 4 == 0:
 		print(msg)
 
 func _process(delta: float) -> void:
-	skip = skip + 1
-	var player : CharacterBody2D = get_tree().get_first_node_in_group("player")
+	# var player : CharacterBody2D = get_tree().get_first_node_in_group("player")
 	var camera: Camera2D = get_tree().get_first_node_in_group("camera")
-	var t = get_viewport_rect()
-	var vp = get_viewport()
-	# iter_print("viewport:\n\t{0}\n\t{1}".format([vp,t]))
-	var window = get_window() 
-	iter_print("win: {0}".format([get_window().size]))
-	
-	# print("t: {0}".format([t]))
-	iter_print("camera:\n\tviewport_rect: {0}\n\ttransform: {1}".format([camera.get_viewport_rect(),  camera.get_viewport_transform()]))
-	iter_print("player: P:{0}, GP:{1}".format([player.position,player.global_position]))
-	
-	#if current_speaker_node:
-	#	print("speaker global pos: {0}".format([current_speaker_node.global_position]))
-	
-	# var camera_topleft = camera.global_position - (get_window().size / 2.0)
-	# print(camera_topleft)
-	
+
+	# current speaker node: e.g.: alert node oder player,
+	# current_speech_bubble_node: displayed textbox
+	# we are positioning it here correctly
 	if current_speaker_node and current_speech_bubble_node:
 		var transform = camera.get_viewport_transform()
+		
+		# we need to divide the origin according to the scale of the viewport transforms as
+		# origin scales with the window size too
 		var scaled_origin = Vector2(
-			 transform.origin.x / transform.x.x ,
+			transform.origin.x / transform.x.x ,
 			transform.origin.y / transform.y.y
 		)
-		iter_print("cspn:\n\tp: {0}\n\t gp: {1}".format([current_speaker_node.position, current_speaker_node.global_position]))
-		current_speech_bubble_node.position = current_speaker_node.global_position + scaled_origin
-		# current_speech_bubble_node.position.x *= transform.x
-		# current_speech_bubble_node.position.y = current_speaker_node.global_position.y + origin.y
-		iter_print("box: {0}".format([current_speech_bubble_node.position]))
-		# var viewport_pos = get_viewport().get_visible_rect().position
-		# print(t)
-		# current_speech_bubble_node.position = current_speaker_node.global_position
-		# current_speech_bubble_node.position = current_speaker_node.global_position # + camera.global_position + (get_window().size / 2.0)
-	
+		
+		# we want to clip the dialog box later so it isn't out of the viewport
+		var bbox = Vector2(current_speech_bubble_node.size)
+		var pos = current_speaker_node.global_position + scaled_origin
+		
+		# clipping: if the bbox of the speechbuble might be out of the window
+		#   move it back in
+		var camera_viewport_size = camera.get_viewport_rect().size
+		if (pos.x + bbox.x ) >= camera_viewport_size.x:
+			pos.x -= bbox.x
+		
+		if (pos.y + bbox.y ) >= camera_viewport_size.y:
+			pos.y -= bbox.y
+		
+		current_speech_bubble_node.position = pos
