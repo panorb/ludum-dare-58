@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready() -> void:
-	set_level("Level1", "")
+	set_level("Hangar", "")
 	add_to_group("game")
 
 func set_level(level_name, entrance):
