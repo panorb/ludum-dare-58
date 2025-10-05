@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_vkbyq"]
 [ext_resource type="PackedScene" uid="uid://dgjsu4poy1siu" path="res://interactable/wrench.tscn" id="2_qohg2"]
 [ext_resource type="PackedScene" uid="uid://5yb60o2rqeis" path="res://interactable/lock_wrench.tscn" id="3_vkbyq"]
-[ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door.tscn" id="5_afkyo"]
+[ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="5_afkyo"]
 [ext_resource type="PackedScene" uid="uid://c6o2wukn2og6b" path="res://interactable/auto_door_left.tscn" id="6_a1r6t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]

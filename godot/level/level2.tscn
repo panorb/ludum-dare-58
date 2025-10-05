@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_h2oih"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_axulw"]
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="2_djs1c"]
-[ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door.tscn" id="3_qf5ud"]
+[ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="3_qf5ud"]
 [ext_resource type="PackedScene" uid="uid://cyamilqua07qd" path="res://interactable/auto_door_right.tscn" id="4_h2oih"]
 [ext_resource type="Texture2D" uid="uid://bwn3yg2nff6wt" path="res://level/hangar/hangar_decal_hatch.png" id="6_tk77j"]
 [ext_resource type="Texture2D" uid="uid://c6n40ghy47vle" path="res://level/hangar/hangar_decal_sign.png" id="7_k4cq1"]
