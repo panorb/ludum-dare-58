@@ -54,6 +54,10 @@ func execute_instruction():
 			await %Player.animation_finished
 			print("wow")
 			advance_cutscene()
+		"unlock_journal_entry":
+			var entry = current_instruction["entry"]
+			%Journal.unlock_entry(entry)
+			advance_cutscene()
 		_:
 			print("Cutscene encountered unknown type: '{0}'".format([instruction_type]))
 			advance_cutscene()

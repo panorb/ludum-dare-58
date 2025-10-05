@@ -1,33 +1,37 @@
 [
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "What is that?"
-    },
-		{
-				"type": "speech",
-				"speaker": "player",
-				"text": "This is a slightly longer text for testing purposes. Are you seeing this shit? He turned himself into a pickle. Hilarious."
-		},
-		{
-				"type": "speech",
-				"speaker": "player",
-				"text": "This is short again..."
-		},
-    {
-        "type": "player_animation",
-        "animation": "pickup"
-    },
-		{
-				"type": "queue_free",
-				"group": "wrench"
-		},
-		{
-				"type": "player_animation",
-				"animation": "idle"
-		},
-    {
-        "type": "item_pickup",
-        "item": "wrench"
-    }
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "What is that?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "This is a slightly longer text for testing purposes. Are you seeing this shit? He turned himself into a pickle. Hilarious."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "This is short again..."
+	},
+	{
+		"type": "player_animation",
+		"animation": "pickup"
+	},
+	{
+		"type": "queue_free",
+		"group": "wrench"
+	},
+	{
+		"type": "player_animation",
+		"animation": "idle"
+	},
+	{
+		"type": "item_pickup",
+		"item": "wrench"
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "got_wrench"
+	}
 ]
