@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6o2wukn2og6b"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_3ryos"]
+[ext_resource type="Script" uid="uid://541py63ioifg" path="res://interactable/auto_door.gd" id="2_ks3bt"]
+[ext_resource type="Texture2D" uid="uid://b787jp83poyix" path="res://interactable/wrench.png" id="3_04pce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsc5r"]
+size = Vector2(2, 62)
+
+[node name="AutoDoor" instance=ExtResource("1_3ryos")]
+collision_layer = 2048
+script = ExtResource("2_ks3bt")
+target = "Level1"
+entrance = "Level1Entrance"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+position = Vector2(14, -31)
+shape = SubResource("RectangleShape2D_hsc5r")
+
+[node name="Door" type="Sprite2D" parent="." index="1"]
+visible = false
+position = Vector2(1, -1)
+texture = ExtResource("3_04pce")
+
+[node name="ButtonPromptSprite" parent="." index="2"]
+position = Vector2(0, -66)
