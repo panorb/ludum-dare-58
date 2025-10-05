@@ -35,7 +35,7 @@ func on_trigger_failed(): # overwrite in child scenes & scripts
 
 # try to interact with the interactable
 func trigger():
-	if %CutsceneConductor.is_playing_cutscene():
+	if get_tree().get_first_node_in_group("cutscene_conductor").is_playing_cutscene():
 		return
 	
 	$ButtonPromptSprite.visible = false
@@ -47,7 +47,7 @@ func trigger():
 
 # becomes targeted by player
 func player_enter():
-	if %CutsceneConductor.is_playing_cutscene():
+	if get_tree().get_first_node_in_group("cutscene_conductor").is_playing_cutscene():
 		return
 	
 	if not active:
