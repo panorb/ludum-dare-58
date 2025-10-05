@@ -42,6 +42,7 @@ theme_override_constants/separation = 32
 unique_name_in_owner = true
 
 [node name="Journal" parent="CanvasLayer" instance=ExtResource("7_y36n6")]
+unique_name_in_owner = true
 
 [node name="Level2" parent="." instance=ExtResource("7_u5opy")]
 position = Vector2(1270, -1)

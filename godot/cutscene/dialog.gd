@@ -30,7 +30,7 @@ func _process(delta: float) -> void:
 	var camera : Camera2D = get_tree().get_first_node_in_group("camera")
 	
 	var camera_topleft = camera.global_position - (get_window().size / 2.0)
-	print(camera_topleft)
+	#print(camera_topleft)
 	
 	if current_speaker_node and current_speech_bubble_node:
 		var viewport_pos = get_viewport().get_visible_rect().position

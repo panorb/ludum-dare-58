@@ -1,9 +1,9 @@
 [
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "What is that?"
-    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "What is that?"
+	},
 		{
 				"type": "speech",
 				"speaker": "player",
@@ -14,16 +14,20 @@
 				"speaker": "player",
 				"text": "This is short again..."
 		},
-    {
-        "type": "player_animation",
-        "animation": "pickup"
-    },
+	{
+		"type": "player_animation",
+		"animation": "pickup"
+	},
 		{
 				"type": "queue_free",
 				"group": "wrench"
 		},
-    {
-        "type": "item_pickup",
-        "item": "wrench"
-    }
+	{
+		"type": "item_pickup",
+		"item": "wrench"
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "got_wrench"
+	}
 ]
