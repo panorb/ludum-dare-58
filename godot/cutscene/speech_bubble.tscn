@@ -1,12 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://07cnxpbwlf1g"]
 
 [ext_resource type="Theme" uid="uid://bka84wch1et7p" path="res://ui/ui_theme.tres" id="1_3p65j"]
-[ext_resource type="Texture2D" uid="uid://cip4jvqeig046" path="res://dialog/bubble_9patch.png" id="1_4lo0k"]
-[ext_resource type="Script" uid="uid://c3r7f0jn5ru6m" path="res://dialog/speech_bubble.gd" id="2_t6kga"]
+[ext_resource type="Texture2D" uid="uid://cip4jvqeig046" path="res://cutscene/bubble_9patch.png" id="1_4lo0k"]
+[ext_resource type="Script" uid="uid://c3r7f0jn5ru6m" path="res://cutscene/speech_bubble.gd" id="2_t6kga"]
 
 [node name="SpeechBubble" type="MarginContainer"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 21.0
+offset_bottom = 39.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 theme = ExtResource("1_3p65j")
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 0
@@ -24,10 +26,15 @@ patch_margin_bottom = 8
 
 [node name="TextPadding" type="MarginContainer" parent="."]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextPadding"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 0)
+clip_contents = false
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Dies ist ein Text. Das ist die Textgarantie. Dieser Text ist lang, aber cool. Sehr cool. Sooo cool. Woooooow. Lorem Ipsum Cooooooooooooolio. uiiiuuiuiuiuiuiuiuiuiuuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiuiu"
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Woah"
 fit_content = true

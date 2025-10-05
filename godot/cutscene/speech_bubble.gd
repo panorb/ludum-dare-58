@@ -1,5 +1,5 @@
 class_name SpeechBubble
-extends Control
+extends MarginContainer
 
 var tween : Tween
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cip4jvqeig046"
-path="res://.godot/imported/bubble_9patch.png-53a2bdc234d707b6ecd19ce0802c7b00.ctex"
+path="res://.godot/imported/bubble_9patch.png-3a487e1e9f5817999abd589bd33d807d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialog/bubble_9patch.png"
-dest_files=["res://.godot/imported/bubble_9patch.png-53a2bdc234d707b6ecd19ce0802c7b00.ctex"]
+source_file="res://cutscene/bubble_9patch.png"
+dest_files=["res://.godot/imported/bubble_9patch.png-3a487e1e9f5817999abd589bd33d807d.ctex"]
 
 [params]
 
