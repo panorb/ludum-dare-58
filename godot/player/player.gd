@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var speaker_position_marker : Marker2D = $SpeakerPosition
+
 var interactables_in_reach = []
 var closest_interactable = null
 

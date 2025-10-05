@@ -5,10 +5,9 @@
 [ext_resource type="Script" uid="uid://c3r7f0jn5ru6m" path="res://cutscene/speech_bubble.gd" id="2_t6kga"]
 
 [node name="SpeechBubble" type="MarginContainer"]
-offset_right = 21.0
-offset_bottom = 39.0
-size_flags_horizontal = 2
-size_flags_vertical = 2
+visible = false
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_3p65j")
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_top = 0
@@ -30,8 +29,7 @@ layout_mode = 2
 [node name="RichTextLabel" type="RichTextLabel" parent="TextPadding"]
 unique_name_in_owner = true
 clip_contents = false
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-size_flags_vertical = 0
 text = "Woah"
 fit_content = true

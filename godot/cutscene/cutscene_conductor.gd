@@ -37,11 +37,16 @@ func execute_instruction():
 		"speech":
 			advance_cooldown = 2.0
 			var bubble_text = current_instruction["text"]
-			var speaker = current_instruction["speaker"]
+			var speaker = "speaker_{0}".format([current_instruction["speaker"]])
 			%Dialog.display_bubble(bubble_text, speaker)
 		"item_pickup":
 			var item = current_instruction["item"]
 			%Inventory.add_item(item)
+			advance_cutscene()
+		"queue_free":
+			var group = current_instruction["group"]
+			var node = get_tree().get_first_node_in_group(group)
+			node.queue_free()
 			advance_cutscene()
 		_:
 			print("Cutscene encountered unknown type: '{0}'".format([instruction_type]))
