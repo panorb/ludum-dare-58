@@ -1,9 +1,12 @@
+class_name Player
 extends CharacterBody2D
 
 @onready var speaker_position_marker : Marker2D = $SpeakerPosition
 
 var interactables_in_reach = []
 var closest_interactable = null
+
+signal animation_finished
 
 func _ready():
 	$InteractionReach.area_entered.connect(add_interactable)
@@ -24,6 +27,11 @@ func set_camera_limits(rect):
 	$Camera2D.limit_top = rect.position.y
 	$Camera2D.limit_right = rect.position.x + rect.size.x
 	$Camera2D.limit_bottom = rect.position.y + rect.size.y
+
+func play_animation(anim_name: String):
+	$AnimatedSprite2D.play(anim_name)
+	await $AnimatedSprite2D.animation_finished
+	animation_finished.emit()
 
 func _process(delta: float) -> void:
 	var horizontal_velocity = 0.0

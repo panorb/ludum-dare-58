@@ -22,6 +22,10 @@ window/size/viewport_height=320
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
+
 [input]
 
 move_left={
