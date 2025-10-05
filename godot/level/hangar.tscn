@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://c4bwtwtturkci"]
+[gd_scene load_steps=12 format=4 uid="uid://c4bwtwtturkci"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_s7anl"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_5n5hi"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c6o2wukn2og6b" path="res://interactable/auto_door_left.tscn" id="9_fhphh"]
 [ext_resource type="Texture2D" uid="uid://dn8iph0p6b78m" path="res://level/hangar/hangar_decal_wire.png" id="9_rtdv1"]
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="10_1mkcw"]
+[ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="10_s7anl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(1023, 318)
@@ -56,3 +57,8 @@ shape = SubResource("RectangleShape2D_qohg2")
 position = Vector2(753, 224)
 target = "Hub1"
 entrance = "HangarDoor"
+
+[node name="DoorInto" parent="." instance=ExtResource("10_s7anl")]
+position = Vector2(-9, 298)
+target = "Engineering"
+entrance = "Hub2EngDoor"
