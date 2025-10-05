@@ -4,18 +4,19 @@
 [ext_resource type="Script" uid="uid://vnallcl0pp5x" path="res://interactable/door.gd" id="2_hsc5r"]
 [ext_resource type="Texture2D" uid="uid://b787jp83poyix" path="res://interactable/wrench.png" id="3_t00ff"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_x5w8o"]
-radius = 69.02898
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsc5r"]
+size = Vector2(36, 62)
 
 [node name="Door" instance=ExtResource("1_hsc5r")]
 collision_layer = 2048
 collision_mask = 0
 script = ExtResource("2_hsc5r")
 target = "Level1"
+entrance = "Level1Entrance"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-position = Vector2(2, 5)
-shape = SubResource("CircleShape2D_x5w8o")
+position = Vector2(0, -31)
+shape = SubResource("RectangleShape2D_hsc5r")
 
 [node name="Door" type="Sprite2D" parent="." index="1"]
 visible = false
@@ -24,3 +25,4 @@ texture = ExtResource("3_t00ff")
 
 [node name="ButtonPromptSprite" parent="." index="2"]
 visible = true
+position = Vector2(0, -66)
