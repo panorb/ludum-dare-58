@@ -45,8 +45,8 @@ func _process(delta: float) -> void:
 		horizontal_velocity -= 200
 	if Input.is_action_pressed("move_right"):
 		horizontal_velocity += 200
-	if Input.is_action_just_pressed("jump"):
-		velocity.y = -300
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = -385
 	
 	velocity.x = horizontal_velocity
 	var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")

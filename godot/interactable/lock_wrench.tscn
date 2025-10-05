@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://5yb60o2rqeis"]
+[gd_scene load_steps=6 format=3 uid="uid://5yb60o2rqeis"]
 
 [ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_vse6a"]
 [ext_resource type="Script" uid="uid://d3xluvibj7x3w" path="res://interactable/lock_wrench.gd" id="2_vse6a"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x5w8o"]
 radius = 69.02898
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vse6a"]
+size = Vector2(33, 97)
 
 [node name="LockWrench" instance=ExtResource("1_vse6a")]
 collision_layer = 2048
@@ -19,3 +22,7 @@ shape = SubResource("CircleShape2D_x5w8o")
 [node name="Lock" type="Sprite2D" parent="." index="1"]
 position = Vector2(1, -1)
 texture = ExtResource("3_vse6a")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="3"]
+position = Vector2(117.5, -48.5)
+shape = SubResource("RectangleShape2D_vse6a")

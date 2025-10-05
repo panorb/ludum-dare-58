@@ -15,7 +15,7 @@ script = ExtResource("1_u5opy")
 [node name="Level1" parent="." instance=ExtResource("2_vasa2")]
 
 [node name="Level2" parent="." instance=ExtResource("7_u5opy")]
-position = Vector2(1270, -1)
+position = Vector2(1272, -1)
 
 [node name="Player" parent="." instance=ExtResource("1_l1rk1")]
 unique_name_in_owner = true
