@@ -33,6 +33,10 @@ func on_trigger(): # overwrite in child scenes & scripts
 func on_trigger_failed(): # overwrite in child scenes & scripts
 	print("Cannot interact -> not triggered")
 
+# what happens if the player walks in
+func on_walk_in(): # overwrite in child scenes & scripts
+	return false # return true if the rest should be skipped
+
 # try to interact with the interactable
 func trigger():
 	if get_tree().get_first_node_in_group("cutscene_conductor").is_playing_cutscene():
@@ -49,8 +53,9 @@ func trigger():
 func player_enter():
 	if get_tree().get_first_node_in_group("cutscene_conductor").is_playing_cutscene():
 		return
-	
 	if not active:
+		return
+	if on_walk_in():
 		return
 	if not can_detect():
 		return

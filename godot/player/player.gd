@@ -20,10 +20,15 @@ func remove_interactable(interactable):
 	interactables_in_reach.erase(interactable)
 
 func set_camera_limits(rect):
+	print(rect)
 	$Camera2D.limit_left = rect.position.x
 	$Camera2D.limit_top = rect.position.y
 	$Camera2D.limit_right = rect.position.x + rect.size.x
 	$Camera2D.limit_bottom = rect.position.y + rect.size.y
+	print($Camera2D.limit_left)
+	print($Camera2D.limit_top)
+	print($Camera2D.limit_right)
+	print($Camera2D.limit_bottom)
 
 func _process(delta: float) -> void:
 	var horizontal_velocity = 0.0

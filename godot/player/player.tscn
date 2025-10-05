@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dt05gb1cuukff" path="res://player/player.gd" id="1_rkbax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oul6g"]
-size = Vector2(20, 61)
+size = Vector2(20, 62)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
 radius = 19.026299
@@ -22,7 +22,7 @@ position = Vector2(0, -32)
 texture = ExtResource("1_oul6g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -30.5)
+position = Vector2(0, -31)
 shape = SubResource("RectangleShape2D_oul6g")
 
 [node name="InteractionReach" type="Area2D" parent="."]
