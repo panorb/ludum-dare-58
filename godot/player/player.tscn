@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqo6h223cwhjb"]
 
-[ext_resource type="Texture2D" uid="uid://bhc6u34j4yjkb" path="res://player/player.png" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://dt05gb1cuukff" path="res://player/player.gd" id="1_rkbax"]
+[ext_resource type="SpriteFrames" uid="uid://b08ytowrnhk2c" path="res://player/player.aseprite" id="2_rkbax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oul6g"]
 size = Vector2(20, 62)
@@ -17,9 +17,11 @@ script = ExtResource("1_rkbax")
 [node name="SpeakerPosition" type="Marker2D" parent="." groups=["speaker_player"]]
 position = Vector2(0, -42)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -32)
-texture = ExtResource("1_oul6g")
+sprite_frames = ExtResource("2_rkbax")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -31)
