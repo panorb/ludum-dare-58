@@ -18,6 +18,10 @@
         "type": "player_animation",
         "animation": "pickup"
     },
+		{
+				"type": "queue_free",
+				"group": "wrench"
+		},
     {
         "type": "item_pickup",
         "item": "wrench"
