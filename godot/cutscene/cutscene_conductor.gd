@@ -48,6 +48,16 @@ func execute_instruction():
 			var node = get_tree().get_first_node_in_group(group)
 			node.queue_free()
 			advance_cutscene()
+		"player_animation":
+			var animation = current_instruction["animation"]
+			%Player.play_animation(animation)
+			await %Player.animation_finished
+			print("wow")
+			advance_cutscene()
+		"unlock_journal_entry":
+			var entry = current_instruction["entry"]
+			%Journal.unlock_entry(entry)
+			advance_cutscene()
 		_:
 			print("Cutscene encountered unknown type: '{0}'".format([instruction_type]))
 			advance_cutscene()

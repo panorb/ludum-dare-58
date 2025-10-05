@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhc6u34j4yjkb"
-path="res://.godot/imported/player.png-1ad27fc2a62fa126eae918723933dd6f.ctex"
+uid="uid://dn8iph0p6b78m"
+path="res://.godot/imported/hangar_decal_wire.png-7ae93d5d20f586b288515d9c3bab9973.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/player.png"
-dest_files=["res://.godot/imported/player.png-1ad27fc2a62fa126eae918723933dd6f.ctex"]
+source_file="res://level/hangar/hangar_decal_wire.png"
+dest_files=["res://.godot/imported/hangar_decal_wire.png-7ae93d5d20f586b288515d9c3bab9973.ctex"]
 
 [params]
 
