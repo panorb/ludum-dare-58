@@ -28,5 +28,11 @@ func _set_text(value: String):
 	%RichTextLabel.text = value
 	visible = true
 
+func hide_box():
+	$NinePatchRect.visible = false
+
+func show_box():
+	$NinePatchRect.visible = true
+
 func get_visible_rect():
 	return %RichTextLabel.get_visible_content_rect()
