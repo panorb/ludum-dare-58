@@ -36,9 +36,9 @@ func unlock_entry(entry):
 	#var new_entry = journal_entry_scene.instantiate()
 	new_entry.set_text(entries[entry])
 	new_entry.unlock()
+	$NewEntryPlayer.play()
 	#new_entry.set_text(entries[entry])
 	unread.append(new_entry)
-	
 
 func has_entry(entry):
 	return entry in unlocked
@@ -48,9 +48,11 @@ func _on_timer_timeout():
 
 func open_journal():
 	%JournalPanel.visible = true
+	%Player.freeze()
 
 func close_journal():
 	%JournalPanel.visible = false
+	%Player.unfreeze()
 	for entry in unread:
 		entry.mark_read()
 	unread.clear()

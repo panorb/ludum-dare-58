@@ -1,8 +1,21 @@
 [
 	{
+		"type": "player_animation",
+		"animation": "kneel"
+	},
+	{
 		"type": "speech",
 		"speaker": "player",
 		"text": "This doesn't look right..."
+	},
+	{
+		"type": "player_animation",
+		"animation": "idle",
+		"wait": false
+	},
+	{
+		"type": "wait",
+		"time": 0.5
 	},
 	{
 		"type": "speech",
@@ -18,5 +31,10 @@
 		"type": "speech",
 		"speaker": "player",
 		"text": "Could be an easy fix, if I find some suitable replacement parts"
+	},
+	{
+		"type": "player_animation",
+		"animation": "idle",
+		"wait": false
 	}
 ]

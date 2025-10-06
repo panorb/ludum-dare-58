@@ -32,10 +32,10 @@ func on_trigger():
 	get_tree().get_first_node_in_group("inventory").remove_item("cable")
 	is_custom_playing = false
 	$DoorSprite.play("opening")
-	print("lock open")
+	$HydraulicsPlayer.play()
 	open = true
 	$StaticBody2D.queue_free()
-	await get_tree().create_timer(1).timeout
+	#await $DoorSprite.animation_finished
 	$DoorSprite.play("open")
 
 func on_trigger_failed():

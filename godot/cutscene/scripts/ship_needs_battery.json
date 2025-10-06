@@ -1,17 +1,25 @@
 [
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "My trusty ship..."
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Too bad the batteries ran out."
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "As soon as I've found some way to recharge, I'm out of here."
+    },
 	{
-		"type": "speech",
-		"speaker": "player",
-		"text": "My trusty ship..."
+		"type": "unlock_journal_entry",
+		"entry": "got_wrench"
 	},
-	{
-		"type": "speech",
-		"speaker": "player",
-		"text": "Too bad the batteries ran out."
-	},
-	{
-		"type": "speech",
-		"speaker": "player",
-		"text": "As soon as I've found some way to recharge, I'm out of here."
-	}
+    {
+        "type": "item_pickup",
+        "item": "cable"
+    }
 ]

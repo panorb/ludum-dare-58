@@ -1,8 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqo6h223cwhjb"]
+[gd_scene load_steps=15 format=3 uid="uid://cqo6h223cwhjb"]
 
 [ext_resource type="Script" uid="uid://dt05gb1cuukff" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="SpriteFrames" uid="uid://b08ytowrnhk2c" path="res://player/player.aseprite" id="2_rkbax"]
 [ext_resource type="Texture2D" uid="uid://dpibxor8q6b0v" path="res://player/light_cone.png" id="3_g1dw6"]
+[ext_resource type="AudioStream" uid="uid://cb1aebyhigb6a" path="res://player/footsteps/footstep_2.wav" id="4_8t03j"]
+[ext_resource type="AudioStream" uid="uid://xphqbwxe1nml" path="res://player/footsteps/footstep_3.wav" id="5_2ieo8"]
+[ext_resource type="AudioStream" uid="uid://ba50nr3suwaes" path="res://player/footsteps/footstep_4.wav" id="6_ebec5"]
+[ext_resource type="AudioStream" uid="uid://dce3a6u4m4fws" path="res://player/footsteps/footstep_5.wav" id="7_yllr7"]
+[ext_resource type="AudioStream" uid="uid://b6xa2t4ch5mgt" path="res://player/footsteps/footstep_6.wav" id="8_kb6p2"]
+[ext_resource type="AudioStream" uid="uid://y5vx85qmexxm" path="res://player/footsteps/footstep_7.wav" id="9_wodsf"]
+[ext_resource type="AudioStream" uid="uid://bt2iwus6o0yv1" path="res://player/footsteps/footstep_8.wav" id="10_32hag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oul6g"]
 size = Vector2(20, 62)
@@ -32,7 +39,7 @@ position = Vector2(17, -100)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -32)
 sprite_frames = ExtResource("2_rkbax")
-animation = &"idle"
+animation = &"running"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -61,3 +68,45 @@ energy = 2.5
 texture = ExtResource("3_g1dw6")
 offset = Vector2(180, -52)
 texture_scale = 0.7
+
+[node name="Footsteps" type="Node" parent="."]
+
+[node name="Footstep1" type="AudioStreamPlayer" parent="Footsteps"]
+stream = ExtResource("4_8t03j")
+volume_db = -15.0
+bus = &"effects"
+
+[node name="Footstep2" type="AudioStreamPlayer" parent="Footsteps"]
+stream = ExtResource("4_8t03j")
+volume_db = -15.0
+bus = &"effects"
+
+[node name="Footstep3" type="AudioStreamPlayer" parent="Footsteps"]
+stream = ExtResource("5_2ieo8")
+volume_db = -15.0
+bus = &"effects"
+
+[node name="Footstep4" type="AudioStreamPlayer" parent="Footsteps"]
+stream = ExtResource("6_ebec5")
+volume_db = -15.0
+bus = &"effects"
+
+[node name="Footstep5" type="AudioStreamPlayer" parent="Footsteps"]
+stream = ExtResource("7_yllr7")
+volume_db = -15.0
+bus = &"effects"
+
+[node name="Footstep6" type="AudioStreamPlayer" parent="Footsteps"]
+stream = ExtResource("8_kb6p2")
+volume_db = -15.0
+bus = &"effects"
+
+[node name="Footstep7" type="AudioStreamPlayer" parent="Footsteps"]
+stream = ExtResource("9_wodsf")
+volume_db = -15.0
+bus = &"effects"
+
+[node name="Footstep8" type="AudioStreamPlayer" parent="Footsteps"]
+stream = ExtResource("10_32hag")
+volume_db = -15.0
+bus = &"effects"

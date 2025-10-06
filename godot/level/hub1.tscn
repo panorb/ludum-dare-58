@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bdl1mevsuxsfb"]
+[gd_scene load_steps=15 format=4 uid="uid://bdl1mevsuxsfb"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_1dmqt"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_kq08c"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://c6o2wukn2og6b" path="res://interactable/auto_door_left.tscn" id="9_gwaik"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="10_kq08c"]
 [ext_resource type="PackedScene" uid="uid://5yb60o2rqeis" path="res://interactable/security_door_id1.tscn" id="11_uxpqw"]
+[ext_resource type="PackedScene" uid="uid://djsgy0txjhq84" path="res://interactable/generic_auto_dialog.tscn" id="12_vfpb5"]
+[ext_resource type="PackedScene" uid="uid://cf3j4l7754kvt" path="res://interactable/generic_dialog_trigger.tscn" id="13_djv7d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(542, 416)
@@ -67,3 +69,11 @@ entrance = "Hub12Door"
 
 [node name="LockWrench" parent="." instance=ExtResource("11_uxpqw")]
 position = Vector2(61, 224)
+
+[node name="GenericDialogTrigger" parent="." instance=ExtResource("12_vfpb5")]
+position = Vector2(118, 384)
+dialogs = Array[String](["blood_on_the_wall_spotted"])
+
+[node name="GenericDialogTrigger2" parent="." instance=ExtResource("13_djv7d")]
+position = Vector2(61, 351)
+dialogs = Array[String](["blood_on_the_wall"])

@@ -56,7 +56,7 @@ position = Vector2(6126, 171)
 
 [node name="Player" parent="." instance=ExtResource("1_l1rk1")]
 unique_name_in_owner = true
-position = Vector2(195, 1103)
+position = Vector2(227, 1103)
 
 [node name="CutsceneConductor" type="Node" parent="."]
 unique_name_in_owner = true

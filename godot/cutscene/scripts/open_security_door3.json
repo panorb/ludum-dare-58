@@ -1,18 +1,59 @@
 [
 	{
+		"type": "player_animation",
+		"animation": "kneel"
+	},
+	{
 		"type": "speech",
 		"speaker": "player",
 		"text": "I could try to fix this cable with the one I got from the washing maschine..."
 	},
 	{
-		"type": "speech",
-		"speaker": "player",
-		"text": "..."
+		"type": "player_animation",
+		"animation": "kneel_pickup"
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel"
 	},
 	{
 		"type": "speech",
 		"speaker": "player",
 		"text": "..."
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel_pickup"
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel_pickup"
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel"
+	},
+	{
+		"type": "wait",
+		"time": 0.2
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel_pickup"
+	},
+	{
+		"type": "player_animation",
+		"animation": "idle",
+		"wait": false
 	},
 	{
 		"type": "speech",
