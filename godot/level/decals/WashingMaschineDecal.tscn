@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bimh2liw550dy"]
+
+[ext_resource type="SpriteFrames" uid="uid://ddjk568jjcg8g" path="res://interactable/washing_machine/washing_machine.aseprite" id="1_7a6xb"]
+
+[node name="WashingMaschineDecal" type="Node2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_7a6xb")
+animation = &"looted"

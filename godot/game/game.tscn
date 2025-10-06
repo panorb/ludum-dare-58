@@ -105,5 +105,4 @@ stream = ExtResource("20_5e03w")
 bus = &"music"
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.078431375, 0.019607844, 0.019607844, 1)

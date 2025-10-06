@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://b77ox4c5dsy7v"]
+[gd_scene load_steps=11 format=4 uid="uid://b77ox4c5dsy7v"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_o10oi"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_h2v33"]
 [ext_resource type="Texture2D" uid="uid://lm6txskrhia" path="res://level/hangar/hangar_decal_soot_1.png" id="3_034og"]
+[ext_resource type="Texture2D" uid="uid://dn8iph0p6b78m" path="res://level/hangar/hangar_decal_wire.png" id="4_m400m"]
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="4_tlcse"]
 [ext_resource type="PackedScene" uid="uid://ddbej7fv2tj4c" path="res://interactable/wirecutter.tscn" id="5_034og"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="5_m400m"]
@@ -23,6 +24,10 @@ tile_set = ExtResource("2_h2v33")
 [node name="HangarDecalSoot1" type="Sprite2D" parent="."]
 position = Vector2(-41, 195)
 texture = ExtResource("3_034og")
+
+[node name="HangarDecalWire" type="Sprite2D" parent="."]
+position = Vector2(-181, 82)
+texture = ExtResource("4_m400m")
 
 [node name="WallTileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, 32)
@@ -55,3 +60,7 @@ position = Vector2(-344, 224)
 [node name="GenericDialogTrigger" parent="." instance=ExtResource("7_h2v33")]
 position = Vector2(-360, 201)
 dialogs = Array[String](["broken_card_reader"])
+
+[node name="HangarDecalSoot2" type="Sprite2D" parent="."]
+position = Vector2(-187, 160.5)
+texture = ExtResource("3_034og")

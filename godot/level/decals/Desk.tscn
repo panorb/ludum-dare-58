@@ -6,4 +6,4 @@
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_hnjth")
-animation = &"books"
+animation = &"empty"

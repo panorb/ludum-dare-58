@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bk4x5hyi8fryq"]
+[gd_scene load_steps=16 format=4 uid="uid://bk4x5hyi8fryq"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_ca2hu"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_07cog"]
@@ -7,7 +7,13 @@
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="7_ns4b8"]
 [ext_resource type="PackedScene" uid="uid://6qrk4hfeny3d" path="res://interactable/code_lock_puzzle/code_lock_puzzle.tscn" id="8_bsobh"]
 [ext_resource type="PackedScene" uid="uid://cyamilqua07qd" path="res://interactable/auto_door_right.tscn" id="8_vbqtn"]
+[ext_resource type="PackedScene" uid="uid://dpekrbes3hqv5" path="res://level/decals/DeskPC.tscn" id="9_bsobh"]
+[ext_resource type="PackedScene" uid="uid://bhjtvvcvcd24o" path="res://level/decals/Monitor.tscn" id="9_ca2hu"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="10_dly4c"]
+[ext_resource type="PackedScene" uid="uid://c8qpouc01sroc" path="res://level/decals/Locker.tscn" id="11_6c76m"]
+[ext_resource type="PackedScene" uid="uid://dbjyobn4r3yrr" path="res://level/decals/LockerOpenEmpty.tscn" id="12_ikx2t"]
+[ext_resource type="PackedScene" uid="uid://c70qvwxm8ubpa" path="res://interactable/locker/locker.tscn" id="13_umpop"]
+[ext_resource type="PackedScene" uid="uid://bvsoprj0obnjn" path="res://level/decals/DeskBooks.tscn" id="14_ikx2t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(767, 381)
@@ -17,7 +23,7 @@ script = ExtResource("1_ca2hu")
 
 [node name="BackgroundTileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-32, 32)
-tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAAD+/wAAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAD+/wAAAQAAAAAAAAA=")
 tile_set = ExtResource("2_07cog")
 
 [node name="HangarDecalSoot1" type="Sprite2D" parent="."]
@@ -50,7 +56,7 @@ entrance = "Hub2EngDoor"
 position = Vector2(-448, 199)
 
 [node name="CodeLockPuzzle" parent="." instance=ExtResource("8_bsobh")]
-position = Vector2(-402, 272)
+position = Vector2(-346, 272)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
@@ -58,3 +64,23 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-480, 192, -475, 197, -480, 197)
+
+[node name="Monitor" parent="." instance=ExtResource("9_ca2hu")]
+position = Vector2(-426, 240)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+
+[node name="DeskPC" parent="." instance=ExtResource("9_bsobh")]
+position = Vector2(-445, 266)
+
+[node name="Locker" parent="." instance=ExtResource("11_6c76m")]
+position = Vector2(-170, 130)
+
+[node name="LockerOpen" parent="." instance=ExtResource("12_ikx2t")]
+position = Vector2(-154, 130)
+
+[node name="Locker2" parent="." instance=ExtResource("13_umpop")]
+position = Vector2(-186, 130)
+
+[node name="DeskBooks" parent="." instance=ExtResource("14_ikx2t")]
+position = Vector2(-71, 138)
