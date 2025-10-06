@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c4bwtwtturkci"]
+[gd_scene load_steps=16 format=4 uid="uid://c4bwtwtturkci"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_s7anl"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_5n5hi"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://dgjsu4poy1siu" path="res://interactable/wrench.tscn" id="11_5n5hi"]
 [ext_resource type="PackedScene" uid="uid://bomjqlahvpem" path="res://interactable/extending_platform/extending_platform.tscn" id="12_u56me"]
 [ext_resource type="PackedScene" uid="uid://6qrk4hfeny3d" path="res://interactable/code_lock_puzzle/code_lock_puzzle.tscn" id="13_akl20"]
+[ext_resource type="PackedScene" uid="uid://u4gyy6gki0gj" path="res://interactable/dead_body/dead_body.tscn" id="14_6ww0v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(1023, 318)
@@ -75,3 +76,6 @@ position = Vector2(496, 252)
 [node name="CodeLockPuzzle" parent="." instance=ExtResource("13_akl20")]
 position = Vector2(387, 292)
 on_puzzle_solve_group = "puzzle_extender"
+
+[node name="DeadBody" parent="." instance=ExtResource("14_6ww0v")]
+position = Vector2(478, 295)
