@@ -1,6 +1,5 @@
 extends Control
 
-# "full_battery" # to check end screen
 var items = []
 var display_items = []
 var item_scene = preload("res://game/inventory_item.tscn")
@@ -11,9 +10,9 @@ func _ready():
 		item.queue_free()
 	display_items.clear()
 	add_to_group("inventory")
-	print("added to inventory")
 
 func add_item(item, count=1):
+	$ItemPickupPlayer.play()
 	for i in range(count):
 		items.append(item)
 		var display_item = item_scene.instantiate()

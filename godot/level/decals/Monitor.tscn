@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhjtvvcvcd24o"]
+
+[ext_resource type="Texture2D" uid="uid://f0cvh0c8ynl" path="res://level/engineering/engineering_decal_2.png" id="1_krd6w"]
+
+[node name="Monitor" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_krd6w")

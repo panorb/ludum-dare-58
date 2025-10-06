@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cqo6h223cwhjb"]
+[gd_scene load_steps=17 format=3 uid="uid://cqo6h223cwhjb"]
 
 [ext_resource type="Script" uid="uid://dt05gb1cuukff" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="SpriteFrames" uid="uid://b08ytowrnhk2c" path="res://player/player.aseprite" id="2_rkbax"]
@@ -10,6 +10,8 @@
 [ext_resource type="AudioStream" uid="uid://b6xa2t4ch5mgt" path="res://player/footsteps/footstep_6.wav" id="8_kb6p2"]
 [ext_resource type="AudioStream" uid="uid://y5vx85qmexxm" path="res://player/footsteps/footstep_7.wav" id="9_wodsf"]
 [ext_resource type="AudioStream" uid="uid://bt2iwus6o0yv1" path="res://player/footsteps/footstep_8.wav" id="10_32hag"]
+[ext_resource type="AudioStream" uid="uid://d0s2fb71smvqk" path="res://player/jumps/jump_1.wav" id="11_ebec5"]
+[ext_resource type="AudioStream" uid="uid://y7wr8u6y20b6" path="res://player/jumps/jump_3.wav" id="12_yllr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oul6g"]
 size = Vector2(20, 62)
@@ -33,7 +35,7 @@ collision_layer = 512
 collision_mask = 2050
 script = ExtResource("1_rkbax")
 
-[node name="SpeakerPosition" type="Marker2D" parent="." groups=["speaker_player"]]
+[node name="SpeakerPosition" type="Marker2D" parent="." groups=["speaker_player", "speaker_void"]]
 position = Vector2(17, -100)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -110,3 +112,20 @@ bus = &"effects"
 stream = ExtResource("10_32hag")
 volume_db = -15.0
 bus = &"effects"
+
+[node name="Jumps" type="Node" parent="."]
+
+[node name="Jump1" type="AudioStreamPlayer" parent="Jumps"]
+stream = ExtResource("11_ebec5")
+volume_db = -12.0
+pitch_scale = 0.7
+
+[node name="Jump2" type="AudioStreamPlayer" parent="Jumps"]
+stream = ExtResource("12_yllr7")
+volume_db = -12.0
+pitch_scale = 0.7
+
+[node name="Jump3" type="AudioStreamPlayer" parent="Jumps"]
+stream = ExtResource("12_yllr7")
+volume_db = -12.0
+pitch_scale = 0.7

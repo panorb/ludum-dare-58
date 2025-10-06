@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://dirljqs1ymrbq"]
+[gd_scene load_steps=12 format=4 uid="uid://dirljqs1ymrbq"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_nf67l"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_d0e1r"]
@@ -6,7 +6,10 @@
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="7_4t4pk"]
 [ext_resource type="PackedScene" uid="uid://cf3j4l7754kvt" path="res://interactable/generic_dialog_trigger.tscn" id="7_q4b2k"]
 [ext_resource type="PackedScene" uid="uid://cyamilqua07qd" path="res://interactable/auto_door_right.tscn" id="8_8l4wu"]
+[ext_resource type="PackedScene" uid="uid://d12mgw6b6prli" path="res://level/decals/Trash.tscn" id="8_a2ahu"]
+[ext_resource type="PackedScene" uid="uid://dpekrbes3hqv5" path="res://level/decals/DeskPC.tscn" id="9_d0e1r"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="9_nf67l"]
+[ext_resource type="PackedScene" uid="uid://bvsoprj0obnjn" path="res://level/decals/DeskBooks.tscn" id="10_d0e1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(542, 416)
@@ -45,5 +48,14 @@ target = "Hub4"
 entrance = "Hub34Door"
 
 [node name="GenericDialogTrigger" parent="." instance=ExtResource("7_q4b2k")]
-position = Vector2(-172, 235)
+position = Vector2(-181, 233)
 dialogs = Array[String](["id_card1_find", "id_card1_found"])
+
+[node name="Locker" parent="." instance=ExtResource("8_a2ahu")]
+position = Vector2(-178, 249)
+
+[node name="DeskPC" parent="." instance=ExtResource("9_d0e1r")]
+position = Vector2(-128, 234)
+
+[node name="DeskBooks" parent="." instance=ExtResource("10_d0e1r")]
+position = Vector2(-4, 171)
