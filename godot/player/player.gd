@@ -47,6 +47,12 @@ func play_animation(anim_name: String, emit_signal: bool):
 	if emit_signal:
 		animation_finished.emit()
 
+var time_since_last_step = 0.0
+var last_played_footstep_node : AudioStreamPlayer = null
+
+func get_random_footstep_sound_player() -> AudioStreamPlayer:
+	return $Footsteps.get_child(randi_range(0, $Footsteps.get_child_count() - 1))
+
 func _process(delta: float) -> void:
 	var horizontal_velocity = 0.0
 	
@@ -73,7 +79,18 @@ func _process(delta: float) -> void:
 			$PointLightSpot.scale.x = -1.0
 		else:
 			$PointLightSpot.scale.x = 1.0
-		$AnimatedSprite2D.flip_h = velocity.x < 0
+		$AnimatedSprite2D.flip_h = velocity.x < 0 
+		
+		if $AnimatedSprite2D.animation == "running":
+			time_since_last_step += delta
+			
+			if time_since_last_step > 0.47:
+				var footstep_node = get_random_footstep_sound_player()
+				if last_played_footstep_node == footstep_node:
+					footstep_node = get_random_footstep_sound_player()
+				
+				footstep_node.play()
+				time_since_last_step = 0.0
 	
 	velocity.x = horizontal_velocity
 	var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")

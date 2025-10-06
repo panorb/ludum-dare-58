@@ -21,8 +21,10 @@ func on_trigger():
 		return
 	get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("open_security_door1")
 	$CardReaderSprite.play("accept")
+	$AcceptPlayer.play()
+	await get_tree().create_timer(0.3).timeout
 	$DoorSprite.play("opening")
-	print("lock open")
+	$HydraulicsPlayer.play()
 	open = true
 	$StaticBody2D.queue_free()
 	await get_tree().create_timer(1).timeout
@@ -30,6 +32,7 @@ func on_trigger():
 
 func on_trigger_failed():
 	$CardReaderSprite.play("reject")
+	$RejectPlayer.play()
 	get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("open_security_door1_fail")
 	await get_tree().create_timer(3).timeout
 	$CardReaderSprite.play("idle")

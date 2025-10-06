@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://evqsmj6rd1v6"]
+[gd_scene load_steps=10 format=3 uid="uid://evqsmj6rd1v6"]
 
-[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_d66hx"]
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/interactable.tscn" id="1_d66hx"]
 [ext_resource type="Script" uid="uid://c5mchya6h6dx3" path="res://interactable/security_door_id2.gd" id="2_d66hx"]
 [ext_resource type="SpriteFrames" uid="uid://dc8pyngg3rjhx" path="res://interactable/card_reader/card_reader.aseprite" id="3_il6fj"]
 [ext_resource type="SpriteFrames" uid="uid://cwg74i3d57bhu" path="res://interactable/security_door/security_door_2tile.aseprite" id="4_o0k5m"]
+[ext_resource type="AudioStream" uid="uid://bdst1b3oxf0ra" path="res://interactable/card_reader/reject_card.wav" id="5_il6fj"]
+[ext_resource type="AudioStream" uid="uid://dvx00orx7ybs4" path="res://interactable/card_reader/accept_card.wav" id="6_o0k5m"]
+[ext_resource type="AudioStream" uid="uid://bv03siy5pmyor" path="res://interactable/extending_platform/hydraulics_extend.wav" id="7_o0k5m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x5w8o"]
 radius = 28.160255
@@ -42,3 +45,14 @@ animation = &"idle"
 position = Vector2(72, -32)
 sprite_frames = ExtResource("4_o0k5m")
 animation = &"opening"
+
+[node name="RejectPlayer" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("5_il6fj")
+bus = &"effects"
+
+[node name="AcceptPlayer" type="AudioStreamPlayer" parent="." index="6"]
+stream = ExtResource("6_o0k5m")
+bus = &"effects"
+
+[node name="HydraulicsPlayer" type="AudioStreamPlayer" parent="." index="7"]
+stream = ExtResource("7_o0k5m")
