@@ -37,6 +37,7 @@ func play_animation(anim_name: String):
 	$AnimatedSprite2D.play(anim_name)
 	await $AnimatedSprite2D.animation_finished
 	animation_finished.emit()
+	$AnimatedSprite2D.play("idle")
 
 func _process(delta: float) -> void:
 	var horizontal_velocity = 0.0
@@ -46,7 +47,19 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("move_right"):
 		horizontal_velocity += 200
 	if Input.is_action_just_pressed("jump"):
+		$AnimatedSprite2D.play("jump")
 		velocity.y = -300
+	
+	if abs(velocity.y) < 2 and $AnimatedSprite2D.animation == "jump":
+		$AnimatedSprite2D.play("idle")
+	
+	if abs(velocity.x) > 10 and $AnimatedSprite2D.animation == "idle":
+		$AnimatedSprite2D.play("running")
+	elif abs(velocity.x) < 10 and $AnimatedSprite2D.animation == "running":
+		$AnimatedSprite2D.play("idle")
+	
+	if abs(velocity.x) > 10:
+		$AnimatedSprite2D.flip_h = velocity.x < 0
 	
 	velocity.x = horizontal_velocity
 	var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
