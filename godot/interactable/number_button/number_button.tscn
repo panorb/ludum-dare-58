@@ -30,10 +30,12 @@ autoplay = "none"
 position = Vector2(0, -51)
 stream = ExtResource("5_tmn40")
 max_distance = 180.0
+attenuation = 0.5
 bus = &"effects"
 
 [node name="ButtonPressSound" type="AudioStreamPlayer2D" parent="." index="5"]
 stream = ExtResource("6_ut7dh")
 volume_db = -3.0
 max_distance = 180.0
+attenuation = 0.5
 bus = &"effects"
