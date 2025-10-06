@@ -17,22 +17,12 @@
 		"animation": "kneel"
 	},
 	{
-		"type": "speech",
-		"speaker": "player",
-		"text": "..."
-	},
-	{
 		"type": "player_animation",
 		"animation": "kneel_pickup"
 	},
 	{
 		"type": "player_animation",
 		"animation": "kneel"
-	},
-	{
-		"type": "speech",
-		"speaker": "player",
-		"text": "..."
 	},
 	{
 		"type": "player_animation",
