@@ -10,6 +10,7 @@ func on_trigger():
 	looted = true
 
 func on_cutscene_signal(value: String):
-	$AnimatedSprite2D.play(value)
-	if value == "open_full" or value == "closed_empty" or (looted and value == "open_empty"):
-		$DoorOpenPlayer.play()
+	if $AnimatedSprite2D.sprite_frames.has_animation(value):
+		$AnimatedSprite2D.play(value)
+		if value == "open_full" or value == "closed_empty" or (looted and value == "open_empty"):
+			$DoorOpenPlayer.play()
