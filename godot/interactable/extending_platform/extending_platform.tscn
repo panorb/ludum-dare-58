@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bomjqlahvpem"]
+
+[ext_resource type="Script" uid="uid://cwwv7m8nuqjc5" path="res://interactable/extending_platform/extending_platform.gd" id="1_68ixh"]
+[ext_resource type="SpriteFrames" uid="uid://rwo5o4m4jwhv" path="res://interactable/extending_platform/extending_platform.aseprite" id="1_4612b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68ixh"]
+size = Vector2(63, 4)
+
+[node name="ExtendingPlatform" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_68ixh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_4612b")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_68ixh")
+disabled = true

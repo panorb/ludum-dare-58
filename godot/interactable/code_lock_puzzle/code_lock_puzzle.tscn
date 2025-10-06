@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://6qrk4hfeny3d"]
+
+[ext_resource type="Script" uid="uid://dx38boytlvox5" path="res://interactable/code_lock_puzzle/code_lock_puzzle.gd" id="1_el7pp"]
+[ext_resource type="PackedScene" uid="uid://cduq0762l8qtd" path="res://interactable/number_button/number_button.tscn" id="2_o60fs"]
+
+[node name="CodeLockPuzzle" type="Node2D"]
+script = ExtResource("1_el7pp")
+
+[node name="NumberButton1" parent="." instance=ExtResource("2_o60fs")]
+position = Vector2(-40, 0)
+
+[node name="NumberButton2" parent="." instance=ExtResource("2_o60fs")]
+
+[node name="NumberButton3" parent="." instance=ExtResource("2_o60fs")]
+position = Vector2(40, 0)

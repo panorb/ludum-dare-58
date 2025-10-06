@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c4bwtwtturkci"]
+[gd_scene load_steps=15 format=4 uid="uid://c4bwtwtturkci"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_s7anl"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_5n5hi"]
@@ -11,7 +11,8 @@
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="10_1mkcw"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="10_s7anl"]
 [ext_resource type="PackedScene" uid="uid://dgjsu4poy1siu" path="res://interactable/wrench.tscn" id="11_5n5hi"]
-[ext_resource type="PackedScene" uid="uid://clfj13dv2fngx" path="res://interactable/charging_station/charging_station.tscn" id="12_u56me"]
+[ext_resource type="PackedScene" uid="uid://bomjqlahvpem" path="res://interactable/extending_platform/extending_platform.tscn" id="12_u56me"]
+[ext_resource type="PackedScene" uid="uid://6qrk4hfeny3d" path="res://interactable/code_lock_puzzle/code_lock_puzzle.tscn" id="13_akl20"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(1023, 318)
@@ -68,5 +69,9 @@ entrance = "Hub2EngDoor"
 [node name="Wrench" parent="." instance=ExtResource("11_5n5hi")]
 position = Vector2(193, 306)
 
-[node name="ChargingStation" parent="." instance=ExtResource("12_u56me")]
-position = Vector2(-126, 293)
+[node name="ExtendingPlatform" parent="." groups=["puzzle_extender"] instance=ExtResource("12_u56me")]
+position = Vector2(496, 252)
+
+[node name="CodeLockPuzzle" parent="." instance=ExtResource("13_akl20")]
+position = Vector2(387, 292)
+on_puzzle_solve_group = "puzzle_extender"
