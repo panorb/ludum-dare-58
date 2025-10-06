@@ -67,7 +67,7 @@
 	},
 	{
 		"type": "item_pickup",
-		"item": "id_card"
+		"item": "id_card2"
 	},
 	{
 		"type": "wait",

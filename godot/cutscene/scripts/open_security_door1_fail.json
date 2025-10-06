@@ -1,0 +1,17 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "A card reader?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Seems like it'll open this door..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Can't open it without some kind of ID card, though."
+	}
+]

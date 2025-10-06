@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://bdl1mevsuxsfb"]
+[gd_scene load_steps=13 format=4 uid="uid://bdl1mevsuxsfb"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_1dmqt"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_kq08c"]
@@ -10,6 +10,7 @@
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="8_hq3a3"]
 [ext_resource type="PackedScene" uid="uid://c6o2wukn2og6b" path="res://interactable/auto_door_left.tscn" id="9_gwaik"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="10_kq08c"]
+[ext_resource type="PackedScene" uid="uid://5yb60o2rqeis" path="res://interactable/security_door_id1.tscn" id="11_uxpqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(542, 416)
@@ -63,3 +64,6 @@ entrance = "Hub13Door"
 position = Vector2(16, 384)
 target = "Hub2"
 entrance = "Hub12Door"
+
+[node name="LockWrench" parent="." instance=ExtResource("11_uxpqw")]
+position = Vector2(61, 224)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://dirljqs1ymrbq"]
+[gd_scene load_steps=9 format=4 uid="uid://dirljqs1ymrbq"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_nf67l"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_d0e1r"]
 [ext_resource type="Texture2D" uid="uid://lm6txskrhia" path="res://level/hangar/hangar_decal_soot_1.png" id="4_i42ub"]
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="7_4t4pk"]
+[ext_resource type="PackedScene" uid="uid://cf3j4l7754kvt" path="res://interactable/generic_dialog_trigger.tscn" id="7_q4b2k"]
 [ext_resource type="PackedScene" uid="uid://cyamilqua07qd" path="res://interactable/auto_door_right.tscn" id="8_8l4wu"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="9_nf67l"]
 
@@ -42,3 +43,7 @@ entrance = "Hub13Door"
 position = Vector2(145, 160)
 target = "Hub4"
 entrance = "Hub34Door"
+
+[node name="GenericDialogTrigger" parent="." instance=ExtResource("7_q4b2k")]
+position = Vector2(-172, 235)
+dialogs = Array[String](["id_card1_find", "id_card1_found"])

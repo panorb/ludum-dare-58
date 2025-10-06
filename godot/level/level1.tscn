@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="1_7lnir"]
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_vkbyq"]
 [ext_resource type="PackedScene" uid="uid://dgjsu4poy1siu" path="res://interactable/wrench.tscn" id="2_qohg2"]
-[ext_resource type="PackedScene" uid="uid://5yb60o2rqeis" path="res://interactable/lock_wrench.tscn" id="3_vkbyq"]
+[ext_resource type="PackedScene" uid="uid://5yb60o2rqeis" path="res://interactable/security_door_id1.tscn" id="3_vkbyq"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="5_afkyo"]
 [ext_resource type="PackedScene" uid="uid://c6o2wukn2og6b" path="res://interactable/auto_door_left.tscn" id="6_a1r6t"]
 [ext_resource type="PackedScene" uid="uid://u4gyy6gki0gj" path="res://interactable/dead_body/dead_body.tscn" id="7_pkqcj"]

@@ -1,0 +1,44 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Lot's of stuff here."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Nothing useful though..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "player_animation",
+		"speaker": "player",
+		"animation": "kneel_pickup"
+	},
+	{
+		"type": "signal",
+		"value": "body_state_switch"
+	},
+	{
+		"type": "item_pickup",
+		"item": "id_card1"
+	},
+	{
+		"type": "wait",
+		"time": 0.3
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Interesting. An ID card. Might come in handy."
+	},
+	{
+		"type": "player_animation",
+		"animation": "idle",
+		"wait": false
+	}
+]
