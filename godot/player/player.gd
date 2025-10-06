@@ -69,6 +69,10 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("idle")
 	
 	if abs(velocity.x) > 10:
+		if velocity.x < 0:
+			$PointLightSpot.scale.x = -1.0
+		else:
+			$PointLightSpot.scale.x = 1.0
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	
 	velocity.x = horizontal_velocity

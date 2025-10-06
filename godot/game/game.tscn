@@ -103,3 +103,6 @@ bus = &"music"
 [node name="BGM4Player" type="AudioStreamPlayer" parent="BGM"]
 stream = ExtResource("20_5e03w")
 bus = &"music"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.078431375, 0.019607844, 0.019607844, 1)
