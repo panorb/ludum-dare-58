@@ -14,7 +14,7 @@ script = ExtResource("1_0miul")
 
 [node name="BackgroundTileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-32, 32)
-tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAAD+/wAAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAABAAEAAAD//wEAAAAAAAEAAAA=")
 tile_set = ExtResource("2_86w1p")
 
 [node name="HangarDecalSoot1" type="Sprite2D" parent="."]
