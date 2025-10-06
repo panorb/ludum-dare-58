@@ -33,10 +33,11 @@ func set_camera_limits(rect):
 	print($Camera2D.limit_right)
 	print($Camera2D.limit_bottom)
 
-func play_animation(anim_name: String):
+func play_animation(anim_name: String, emit_signal: bool):
 	$AnimatedSprite2D.play(anim_name)
 	await $AnimatedSprite2D.animation_finished
-	animation_finished.emit()
+	if emit_signal:
+		animation_finished.emit()
 
 func _process(delta: float) -> void:
 	var horizontal_velocity = 0.0

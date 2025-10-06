@@ -1,0 +1,24 @@
+[
+    {
+        "type": "player_animation",
+        "animation": "kneel"
+    },
+    {
+        "type": "wait",
+        "time": 0.7
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Rest in peace, buddy..."
+    },
+    {
+        "type": "wait",
+        "time": 0.3
+    },
+    {
+        "type": "player_animation",
+        "animation": "idle",
+        "wait": false
+    }
+]

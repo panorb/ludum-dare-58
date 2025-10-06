@@ -56,7 +56,7 @@ func execute_instruction():
 			var animation = current_instruction["animation"]
 			var wait = current_instruction["wait"] if current_instruction.has("wait") else true
 			
-			%Player.play_animation(animation)
+			%Player.play_animation(animation, wait)
 			if wait:
 				await %Player.animation_finished
 			advance_cutscene()
@@ -93,5 +93,8 @@ func advance_cutscene():
 
 func _process(delta: float) -> void:
 	if is_playing_cutscene() and advance_cooldown <= 0 and Input.is_action_just_pressed("interact"):
-		advance_cutscene()
+		var active_dialog = cutscene_scripts[active_dialog_name]
+		var current_instruction = active_dialog[cur_instruction]
+		if current_instruction["type"] == "speech":
+			advance_cutscene()
 	advance_cooldown -= delta
