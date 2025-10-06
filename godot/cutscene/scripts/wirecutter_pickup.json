@@ -2,35 +2,33 @@
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "Lot's of stuff here."
+		"text": "What is that?"
 	},
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "Nothing useful though..."
-	},
-	{
-		"type": "speech",
-		"speaker": "player",
-		"text": "..."
+		"text": "A wirecutter... seems like someone dropped it here in a hurry."
 	},
 	{
 		"type": "player_animation",
-		"speaker": "player",
-		"animation": "kneel_pickup"
-	},
-	{
-		"type": "item_pickup",
-		"item": "id_card1"
-	},
-	{
-		"type": "wait",
-		"time": 0.3
+		"animation": "kneel"
 	},
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "Interesting. An ID card. Might come in handy."
+		"text": "Might come in handy later on..."
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel_pickup"
+	},
+	{
+		"type": "queue_free",
+		"group": "wirecutter"
+	},
+	{
+		"type": "item_pickup",
+		"item": "wirecutter"
 	},
 	{
 		"type": "player_animation",

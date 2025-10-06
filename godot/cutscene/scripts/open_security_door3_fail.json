@@ -1,0 +1,22 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "This doesn't look right..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "I'm not gonna try going through THAT - I don't want to risk getting cut in half by that door!"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Looks like someone cut the cables?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Could be an easy fix, if I find some suitable replacement parts"
+	}
+]

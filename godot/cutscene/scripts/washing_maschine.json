@@ -2,12 +2,11 @@
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "Lot's of stuff here."
+		"text": "Maybe I can use the wirecutter I found to cut out the cable."
 	},
 	{
-		"type": "speech",
-		"speaker": "player",
-		"text": "Nothing useful though..."
+		"type": "player_animation",
+		"animation": "kneel"
 	},
 	{
 		"type": "speech",
@@ -21,20 +20,16 @@
 	},
 	{
 		"type": "item_pickup",
-		"item": "id_card1"
-	},
-	{
-		"type": "wait",
-		"time": 0.3
-	},
-	{
-		"type": "speech",
-		"speaker": "player",
-		"text": "Interesting. An ID card. Might come in handy."
+		"item": "cable"
 	},
 	{
 		"type": "player_animation",
 		"animation": "idle",
 		"wait": false
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "That wasn't too hard."
 	}
 ]

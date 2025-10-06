@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bicme5e828ase"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_o5pc5"]
+[ext_resource type="Script" uid="uid://bqls54opfxkxw" path="res://interactable/washing_maschine.gd" id="2_o5pc5"]
+[ext_resource type="SpriteFrames" uid="uid://ddjk568jjcg8g" path="res://interactable/washing_machine/washing_machine.aseprite" id="2_s65e0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x5w8o"]
+radius = 12.0415945
+
+[node name="WashingMaschine" groups=["wrench"] instance=ExtResource("1_o5pc5")]
+collision_mask = 512
+script = ExtResource("2_o5pc5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -14)
+shape = SubResource("CircleShape2D_x5w8o")
+
+[node name="WashingMaschineSprite" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(3, -16)
+sprite_frames = ExtResource("2_s65e0")
+animation = &"closed"
+
+[node name="ButtonPromptSprite" parent="." index="2"]
+position = Vector2(0, -38)

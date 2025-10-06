@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://drjtqmsp1anxe"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_k4sm5"]
+[ext_resource type="Script" uid="uid://bj4ukpmrgw763" path="res://interactable/security_door_cable.gd" id="2_k4sm5"]
+[ext_resource type="SpriteFrames" uid="uid://dc8pyngg3rjhx" path="res://interactable/card_reader/card_reader.aseprite" id="3_rg2x4"]
+[ext_resource type="SpriteFrames" uid="uid://cwg74i3d57bhu" path="res://interactable/security_door/security_door_2tile.aseprite" id="4_dfd60"]
+[ext_resource type="SpriteFrames" uid="uid://b4eqtia3srse3" path="res://interactable/security_door/electrical_panel.aseprite" id="5_3u267"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x5w8o"]
+radius = 17.029387
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vse6a"]
+size = Vector2(14, 64)
+
+[node name="SecurityDoor" instance=ExtResource("1_k4sm5")]
+script = ExtResource("2_k4sm5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+position = Vector2(29, -24)
+shape = SubResource("CircleShape2D_x5w8o")
+
+[node name="ButtonPromptSprite" parent="." index="1"]
+position = Vector2(29, 12)
+offset = Vector2(0, -66)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(72, -32)
+shape = SubResource("RectangleShape2D_vse6a")
+
+[node name="CardReaderSprite" type="AnimatedSprite2D" parent="." index="3"]
+position = Vector2(-16, -24)
+sprite_frames = ExtResource("3_rg2x4")
+animation = &"accept"
+
+[node name="DoorSprite" type="AnimatedSprite2D" parent="." index="4"]
+position = Vector2(72, -32)
+sprite_frames = ExtResource("4_dfd60")
+animation = &"opening"
+
+[node name="PanelSprite" type="AnimatedSprite2D" parent="." index="5"]
+position = Vector2(29, -25)
+sprite_frames = ExtResource("5_3u267")
+animation = &"broken"

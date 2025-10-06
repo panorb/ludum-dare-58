@@ -1,0 +1,12 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Seems someone destroyed the cabling."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Could be an easy fix, if I find some suitable replacement parts."
+	}
+]

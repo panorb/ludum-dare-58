@@ -1,0 +1,27 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "I could try to fix this cable with the one I got from the washing maschine..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "There - now it's no longer stuck in an endless cycle."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Let's hope the cable holds while I walk through it..."
+	}
+]

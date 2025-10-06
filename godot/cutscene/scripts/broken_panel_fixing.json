@@ -1,0 +1,12 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Let's see..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Cable is in, and seems to work"
+	}
+]

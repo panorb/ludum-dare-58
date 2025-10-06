@@ -1,0 +1,31 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Looks like there is some kind of cable inside this washing maschine."
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel"
+	},
+	{
+		"type": "player_animation",
+		"speaker": "player",
+		"animation": "kneel_pickup"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Seems like it's fixed too tight."
+	},
+	{
+		"type": "player_animation",
+		"animation": "idle",
+		"wait": false
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "No way to get it out like this."
+	}
+]
