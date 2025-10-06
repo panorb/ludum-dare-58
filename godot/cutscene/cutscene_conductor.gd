@@ -74,8 +74,19 @@ func execute_instruction():
 			%Journal.unlock_entry(entry)
 			advance_cutscene()
 		"fade_out_bgm":
+			# credits should roll in
 			%BGM.fade_out_bgm()
+			TransitionScreen.transition()
+			await TransitionScreen.on_transition_finished
+			# fade screen to black
+			#   then we could activate it with 0 % opacity and after ward increase it
+			#   if we are at 100 % we could change the scene to something else
+			# could be done using a node that fades in
+			# start to roll credits if the screen is black
+			# one long png that scrolls from top to bottom?
 			advance_cutscene()
+		#"credits":
+		#	pass
 		"fade_in_bgm":
 			%BGM.fade_in_bgm()
 			advance_cutscene()

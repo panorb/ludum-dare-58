@@ -1,17 +1,25 @@
 [
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "Let's put this battery in and hope it's enough to get flying again"
-    },
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "Alright, this is it. Finally up and running again!"
-    },
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "Let's leave this place far behind..."
-    }
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Let's put this battery in and hope it's enough to get flying again"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Alright, this is it. Finally up and running again!"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Let's leave this place far behind..."
+	},
+	{
+		"type": "fade_out_bgm"
+	},
+	{
+		"type": "speech",
+		"speaker": "void",
+		"text": "The End"
+	}
 ]
