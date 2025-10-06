@@ -27,12 +27,16 @@
 		"group": "wrench"
 	},
 	{
-		"type": "player_animation",
-		"animation": "idle"
+		"type": "item_pickup",
+		"item": "wrench"
 	},
 	{
 		"type": "item_pickup",
-		"item": "wrench"
+		"item": "id_card"
+	},
+	{
+		"type": "item_pickup",
+		"item": "hose"
 	},
 	{
 		"type": "unlock_journal_entry",
