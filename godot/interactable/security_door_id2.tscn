@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://evqsmj6rd1v6"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_d66hx"]
+[ext_resource type="Script" uid="uid://c5mchya6h6dx3" path="res://interactable/security_door_id2.gd" id="2_d66hx"]
+[ext_resource type="SpriteFrames" uid="uid://dc8pyngg3rjhx" path="res://interactable/card_reader/card_reader.aseprite" id="3_il6fj"]
+[ext_resource type="SpriteFrames" uid="uid://cwg74i3d57bhu" path="res://interactable/security_door/security_door_2tile.aseprite" id="4_o0k5m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x5w8o"]
+radius = 28.160255
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vse6a"]
+size = Vector2(14, 64)
+
+[node name="SecurityDoor" instance=ExtResource("1_d66hx")]
+script = ExtResource("2_d66hx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -24)
+shape = SubResource("CircleShape2D_x5w8o")
+
+[node name="ButtonPromptSprite" parent="." index="1"]
+visible = true
+position = Vector2(0, 16)
+offset = Vector2(0, -66)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="2"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+position = Vector2(72, -32)
+shape = SubResource("RectangleShape2D_vse6a")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" index="1"]
+
+[node name="CardReaderSprite" type="AnimatedSprite2D" parent="." index="3"]
+position = Vector2(0, -24)
+sprite_frames = ExtResource("3_il6fj")
+animation = &"idle"
+
+[node name="DoorSprite" type="AnimatedSprite2D" parent="." index="4"]
+position = Vector2(72, -32)
+sprite_frames = ExtResource("4_o0k5m")
+animation = &"opening"
