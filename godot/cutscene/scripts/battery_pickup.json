@@ -1,0 +1,42 @@
+[
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "A battery!! Finally!"
+    },
+    {
+        "type": "player_animation",
+        "animation": "kneel"
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "And... you... are..."
+    },
+    {
+        "type": "wait",
+        "time": 0.4
+    },
+    {
+        "type": "player_animation",
+        "animation": "kneel_pickup"
+    },
+    {
+        "type": "signal",
+        "value": "looted"
+    },
+    {
+        "type": "item_pickup",
+        "item": "full_battery"
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "...mine."
+    },
+    {
+        "type": "idle",
+        "animation": "idle",
+        "wait": false
+    }
+]
