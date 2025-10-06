@@ -39,6 +39,10 @@
 		"item": "hose"
 	},
 	{
+		"type": "item_pickup",
+		"item": "full_battery"
+	},
+	{
 		"type": "unlock_journal_entry",
 		"entry": "got_wrench"
 	},
