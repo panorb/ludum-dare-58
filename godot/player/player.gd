@@ -8,6 +8,14 @@ var closest_interactable = null
 
 signal animation_finished
 
+var frozen = false
+
+func freeze():
+	frozen = true
+
+func unfreeze():
+	frozen = false
+
 func _ready():
 	$InteractionReach.area_entered.connect(add_interactable)
 	$InteractionReach.area_exited.connect(remove_interactable)
@@ -42,12 +50,13 @@ func play_animation(anim_name: String, emit_signal: bool):
 func _process(delta: float) -> void:
 	var horizontal_velocity = 0.0
 	
-	if Input.is_action_pressed("move_left"):
-		horizontal_velocity -= 200
-	if Input.is_action_pressed("move_right"):
-		horizontal_velocity += 200
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = -385
+	if not frozen:
+		if Input.is_action_pressed("move_left"):
+			horizontal_velocity -= 200
+		if Input.is_action_pressed("move_right"):
+			horizontal_velocity += 200
+		if Input.is_action_just_pressed("jump") and is_on_floor():
+			velocity.y = -385
 	
 	if abs(velocity.y) < 2 and $AnimatedSprite2D.animation == "jump":
 		$AnimatedSprite2D.play("idle")
@@ -86,5 +95,5 @@ func _process(delta: float) -> void:
 		if closest_interactable != null:
 			closest_interactable.player_exit()
 			closest_interactable = null
-	if Input.is_action_just_pressed("interact") and closest_interactable != null:
+	if Input.is_action_just_pressed("interact") and closest_interactable != null and not frozen:
 		closest_interactable.trigger()
