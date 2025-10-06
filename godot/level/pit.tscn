@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://b024hmnwlqxra"]
+[gd_scene load_steps=8 format=4 uid="uid://b024hmnwlqxra"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_0miul"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_86w1p"]
 [ext_resource type="Texture2D" uid="uid://lm6txskrhia" path="res://level/hangar/hangar_decal_soot_1.png" id="3_nwubf"]
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="4_fdpu0"]
+[ext_resource type="PackedScene" uid="uid://u4gyy6gki0gj" path="res://interactable/dead_body/dead_body.tscn" id="5_86w1p"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="5_wfjrs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
@@ -32,6 +33,9 @@ position = Vector2(0, -32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraBounds"]
 position = Vector2(-304, 198.5)
 shape = SubResource("RectangleShape2D_qohg2")
+
+[node name="DeadBody" parent="CameraBounds" instance=ExtResource("5_86w1p")]
+position = Vector2(-283, 520)
 
 [node name="PitGoalDoor" parent="." instance=ExtResource("5_wfjrs")]
 position = Vector2(-139, -1)
