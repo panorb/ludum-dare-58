@@ -1,0 +1,27 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "What's this?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Seems to be some kind of machine..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Running flawlessly, despite being abondend for who knows how long."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Wait... Could it be?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "I think it's the gravity generator of this station!"
+	}
+]

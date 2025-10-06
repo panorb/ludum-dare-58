@@ -1,0 +1,12 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Does pressing the button again bring the gravity back to normal?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Yup. It does."
+	}
+]

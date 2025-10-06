@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf3j4l7754kvt"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_bbdkj"]
+[ext_resource type="Script" uid="uid://bhghcvrmn0eb8" path="res://interactable/generic_dialog_trigger.gd" id="2_qxc21"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x5w8o"]
+radius = 23.194826
+
+[node name="GenericDialogTrigger" groups=["wrench"] instance=ExtResource("1_bbdkj")]
+collision_mask = 512
+script = ExtResource("2_qxc21")
+dialog = "silence"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_x5w8o")
+
+[node name="ButtonPromptSprite" parent="." index="1"]
+visible = true
