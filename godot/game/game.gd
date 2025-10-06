@@ -16,6 +16,8 @@ func set_level(level_name, entrance):
 	print(level_cam_bounds)
 	level_cam_bounds.position += level.position
 	print(level_cam_bounds)
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	$Player.set_camera_limits(level_cam_bounds)
 	if entrance:
 		var entry_point = level.get_node(entrance).position + level.position
