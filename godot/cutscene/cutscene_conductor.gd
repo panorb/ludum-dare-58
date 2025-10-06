@@ -4,6 +4,9 @@ extends Node
 @export_dir var cutscene_script_dir : String = "res://cutscene/scripts"
 var cutscene_scripts : Dictionary
 
+signal cutscene_signal(value: String)
+signal cutscene_finished
+
 func _ready() -> void:
 	# get_tree().create_timer(0.3).timeout.connect(_on_timer_timeout)
 	var script_files := DirAccess.get_files_at(cutscene_script_dir)
@@ -50,9 +53,19 @@ func execute_instruction():
 			advance_cutscene()
 		"player_animation":
 			var animation = current_instruction["animation"]
+			var wait = current_instruction["wait"] if current_instruction.has("wait") else true
+			
 			%Player.play_animation(animation)
-			await %Player.animation_finished
-			print("wow")
+			if wait:
+				await %Player.animation_finished
+			advance_cutscene()
+		"wait":
+			var time = current_instruction["time"]
+			await get_tree().create_timer(time).timeout
+			advance_cutscene()
+		"signal":
+			var value = current_instruction["value"]
+			cutscene_signal.emit(value)
 			advance_cutscene()
 		"unlock_journal_entry":
 			var entry = current_instruction["entry"]
@@ -66,6 +79,7 @@ func _on_cutscene_end():
 	%Dialog.hide_bubble()
 	active_dialog_name = ""
 	cur_instruction = 0
+	cutscene_finished.emit()
 
 func advance_cutscene():
 	cur_instruction += 1

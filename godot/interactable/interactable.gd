@@ -5,6 +5,11 @@ extends Area2D
 
 func _ready() -> void:
 	$ButtonPromptSprite.visible = false
+	
+	await get_tree().process_frame
+	
+	var cutscene_conductor: CutsceneConductor = get_tree().get_first_node_in_group("cutscene_conductor")
+	cutscene_conductor.cutscene_signal.connect(on_cutscene_signal)
 
 # activates interactable so that it becomes usable again
 func activate():
@@ -24,6 +29,9 @@ func can_detect(): # overwrite in child scenes & scripts
 # if true, player can successfully interact
 func can_trigger(): # overwrite in child scenes & scripts
 	return true
+
+func on_cutscene_signal(value: String):
+	pass
 
 # what should happen when the player interacts
 func on_trigger(): # overwrite in child scenes & scripts

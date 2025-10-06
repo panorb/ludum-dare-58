@@ -37,7 +37,6 @@ func play_animation(anim_name: String):
 	$AnimatedSprite2D.play(anim_name)
 	await $AnimatedSprite2D.animation_finished
 	animation_finished.emit()
-	$AnimatedSprite2D.play("idle")
 
 func _process(delta: float) -> void:
 	var horizontal_velocity = 0.0

@@ -16,7 +16,11 @@
 	},
 	{
 		"type": "player_animation",
-		"animation": "pickup"
+		"animation": "kneel"
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel_pickup"
 	},
 	{
 		"type": "queue_free",
@@ -33,5 +37,10 @@
 	{
 		"type": "unlock_journal_entry",
 		"entry": "got_wrench"
+	},
+	{
+		"type": "player_animation",
+		"animation": "idle",
+		"wait": false
 	}
 ]
