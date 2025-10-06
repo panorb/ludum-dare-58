@@ -2,11 +2,36 @@
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "Oh cool a button"
+		"text": "What's this button for?"
 	},
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "The gravity is low now."
-	}
+		"text": "Let's press it..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Nothing happened?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Oh wait..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Yeah, seems that this controls the gravity."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Pressing the button has switch the entire station to low-gravity."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Guess I can jump really high now..."
+	},
 ]

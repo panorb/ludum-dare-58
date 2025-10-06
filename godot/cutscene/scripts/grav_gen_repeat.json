@@ -1,0 +1,17 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "It's the station's gravity generator."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "I suppose I could switch to low gravity."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Might help exploring the place..."
+	}
+]

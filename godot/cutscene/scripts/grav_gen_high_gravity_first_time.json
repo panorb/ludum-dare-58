@@ -2,11 +2,11 @@
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "What happens if I press it again?"
+		"text": "Does pressing the button again bring the gravity back to normal?"
 	},
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "The gravity is back to normal."
+		"text": "Yup. It does."
 	}
 ]
