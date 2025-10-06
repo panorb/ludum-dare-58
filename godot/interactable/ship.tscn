@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://h4evw17s8mgm"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_ysj4k"]
+[ext_resource type="Script" uid="uid://bxtga783ts65n" path="res://interactable/ship.gd" id="2_xax6y"]
+[ext_resource type="Texture2D" uid="uid://drk4o1p6qdxmk" path="res://interactable/ship.png" id="3_ysj4k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wu3rf"]
+size = Vector2(70, 178)
+
+[node name="Ship" instance=ExtResource("1_ysj4k")]
+collision_mask = 512
+script = ExtResource("2_xax6y")
+
+[node name="Ship" type="Sprite2D" parent="." index="0"]
+z_index = 2
+position = Vector2(1, -80)
+texture = ExtResource("3_ysj4k")
+
+[node name="ButtonPromptSprite" parent="." index="1"]
+z_index = 3
+position = Vector2(-66, -91)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(1, -67)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_wu3rf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="3"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+position = Vector2(0, 1)
+polygon = PackedVector2Array(129, -1, 97, -33, -88, -33, -88, -103, 103, -103, 125, -156, 114, -160, 86, -160, 31, -106, 21, -106, -11, -140, -46, -141, -61, -136, -82, -112, -86, -112, -87, -106, -106, -77, -108, -77, -122, -46, -122, -35, -122, -1, 0, -1)

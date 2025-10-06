@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=4 uid="uid://bbl8q65s446h1"]
+[gd_scene load_steps=8 format=4 uid="uid://bbl8q65s446h1"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_7x5mv"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_agyjn"]
 [ext_resource type="Texture2D" uid="uid://lm6txskrhia" path="res://level/hangar/hangar_decal_soot_1.png" id="3_okog5"]
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="4_r8g2l"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="5_jbg1t"]
+[ext_resource type="PackedScene" uid="uid://clfj13dv2fngx" path="res://interactable/charging_station/charging_station.tscn" id="6_agyjn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(511, 315)
@@ -37,3 +38,6 @@ shape = SubResource("RectangleShape2D_qohg2")
 position = Vector2(102, 192)
 target = "Pit"
 entrance = "PitGoalDoor"
+
+[node name="ChargingStation" parent="." instance=ExtResource("6_agyjn")]
+position = Vector2(228, 148)

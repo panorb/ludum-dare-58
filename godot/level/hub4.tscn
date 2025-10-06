@@ -37,7 +37,7 @@ position = Vector2(-272, 175.5)
 shape = SubResource("RectangleShape2D_qohg2")
 
 [node name="WireCutter" parent="CameraBounds" instance=ExtResource("5_034og")]
-position = Vector2(-431, 208)
+position = Vector2(-428, 224)
 
 [node name="Hub34Door" parent="." instance=ExtResource("5_m400m")]
 position = Vector2(-468, 192)

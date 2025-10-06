@@ -1,0 +1,17 @@
+[
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Let's put this battery in and hope it's enough to get flying again"
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Alright, this is it. Finally up and running again!"
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Let's leave this place far behind..."
+    }
+]
