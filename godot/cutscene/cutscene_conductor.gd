@@ -97,6 +97,8 @@ func execute_instruction():
 			var tween = get_tree().create_tween()
 			tween.tween_property(logo, "self_modulate", Color.TRANSPARENT, 3.0).set_trans(Tween.TRANS_CUBIC)
 			advance_cutscene()
+		"credits_passed":
+			%Player.queue_free()
 		_:
 			print("Cutscene encountered unknown type: '{0}'".format([instruction_type]))
 			advance_cutscene()
