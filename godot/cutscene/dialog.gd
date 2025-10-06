@@ -32,7 +32,6 @@ var current_speech_bubble_node : SpeechBubble
 func display_bubble(text: String, speaker: String):
 	# TODO: Handle speaker
 	var speaker_candidates = get_tree().get_nodes_in_group(speaker)
-	print(speaker_candidates)
 	match speaker:
 		"speaker_void": # scene speaker
 			current_speaker_node = VoidSpeaker.new()
@@ -41,7 +40,6 @@ func display_bubble(text: String, speaker: String):
 			current_speaker_node = speaker_candidates[0]
 		_:
 			print("unrecognized speaker input {0}".format([speaker]))
-	print(current_speaker_node.global_position)
 	
 	var old_speech_bubble_node = current_speech_bubble_node
 	current_speech_bubble_node = speech_bubble_scene.instantiate()
@@ -87,12 +85,13 @@ func _process(delta: float) -> void:
 		var bbox = Vector2(current_speech_bubble_node.size)
 		# origin position of textbox
 		if current_speaker_node is VoidSpeaker:
+			# NOTICE: currently this only gets called when the credits role...
 			current_speaker_node.global_position = calc_center_based_upon_length_of_text(camera_viewport_size, bbox)
+
 			# don't clip textboxes as we know that they shouldn't clip
 			current_speech_bubble_node.position = current_speaker_node.global_position
 			current_speech_bubble_node.hide_box()
-			print("pos: {0}" # scaled: {1}"-+
-			.format([current_speech_bubble_node.position]))
+			current_speech_bubble_node.set_align(HORIZONTAL_ALIGNMENT_CENTER)
 			return
 
 		var pos: Vector2 = current_speaker_node.global_position + scaled_origin

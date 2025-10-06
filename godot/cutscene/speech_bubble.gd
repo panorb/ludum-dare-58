@@ -26,6 +26,7 @@ func _set_text(value: String):
 	tween.play()
 	
 	%RichTextLabel.text = value
+
 	visible = true
 
 func hide_box():
@@ -33,6 +34,9 @@ func hide_box():
 
 func show_box():
 	$NinePatchRect.visible = true
+
+func set_align(alignment: HorizontalAlignment) -> void:
+	%RichTextLabel.horizontal_alignment = alignment
 
 func get_visible_rect():
 	return %RichTextLabel.get_visible_content_rect()

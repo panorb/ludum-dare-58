@@ -43,7 +43,6 @@ func execute_instruction():
 			advance_cooldown = 2.0
 			var bubble_text = current_instruction["text"]
 			var speaker = "speaker_{0}".format([current_instruction["speaker"]])
-			print(speaker)
 			%Dialog.display_bubble(bubble_text, speaker)
 		"item_pickup":
 			var item = current_instruction["item"]
@@ -80,7 +79,8 @@ func execute_instruction():
 			
 			TransitionScreen.fade_to_end_screen() # global variable
 			await TransitionScreen.on_end_screen_finished
-			# TODO: fails if speaker is void check: 'final_dialog.json'
+			%Inventory.visible = false
+			%Journal.visible = false
 			advance_cutscene()
 		"fade_in_bgm":
 			%BGM.fade_in_bgm()
