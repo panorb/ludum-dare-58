@@ -20,7 +20,54 @@
 	{
 		"type": "speech",
 		"speaker": "void",
+		"text": "Credits
+
+Project manager
+@yellowkamel
+"
+	},
+	{
+		"type": "speech",
+		"speaker": "void",
+		"text": "Programmers
+@yellowkamel
+@nickfleming
+@lumitas
+@gumibear
+
+Artists
+@gumibear
+@yellowkamel
+"
+	},
+	{
+		"type": "speech",
+		"speaker": "void",
+		"text": "Screen Writers
+@nickfleming
+"
+	},{
+		"type": "speech",
+		"speaker": "void",
+		"text": "Music
+@rougebluemulan
+
+SFX
+@rougebluemulan
+@yellowkamel
+"
+	},
+	{
+		"type": "speech",
+		"speaker": "void",
+		"text": "Thank you
+for playing"
+	},
+	{
+		"type": "speech",
+		"speaker": "void",
 		"text": "The End"
-	}
+	},
+	
 	
 ]
