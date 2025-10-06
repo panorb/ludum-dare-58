@@ -35,7 +35,7 @@ collision_layer = 512
 collision_mask = 2050
 script = ExtResource("1_rkbax")
 
-[node name="SpeakerPosition" type="Marker2D" parent="." groups=["speaker_player"]]
+[node name="SpeakerPosition" type="Marker2D" parent="." groups=["speaker_player", "speaker_void"]]
 position = Vector2(17, -100)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

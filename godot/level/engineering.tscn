@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://qtovlymu5q0f"]
+[gd_scene load_steps=19 format=4 uid="uid://qtovlymu5q0f"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_iqrbt"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_0fqwl"]
@@ -9,8 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://evqsmj6rd1v6" path="res://interactable/security_door_id2.tscn" id="7_3pcrg"]
 [ext_resource type="PackedScene" uid="uid://bicme5e828ase" path="res://interactable/washing_maschine.tscn" id="8_0fqwl"]
 [ext_resource type="Texture2D" uid="uid://boodvnwhfx80c" path="res://level/engineering/engineering_decal_1.png" id="9_7doqf"]
+[ext_resource type="PackedScene" uid="uid://4ycpibql3uew" path="res://level/decals/GravGen.tscn" id="9_ts8oa"]
 [ext_resource type="Texture2D" uid="uid://f0cvh0c8ynl" path="res://level/engineering/engineering_decal_2.png" id="10_rvhux"]
 [ext_resource type="Texture2D" uid="uid://dufndtmo8da8k" path="res://level/engineering/engineering_decal_3.png" id="11_tgwsm"]
+[ext_resource type="PackedScene" uid="uid://bimh2liw550dy" path="res://level/decals/WashingMaschineDecal.tscn" id="13_tgwsm"]
+[ext_resource type="PackedScene" uid="uid://d12mgw6b6prli" path="res://level/decals/Trash.tscn" id="14_mqxw2"]
+[ext_resource type="PackedScene" uid="uid://bvsoprj0obnjn" path="res://level/decals/DeskBooks.tscn" id="15_83b8t"]
+[ext_resource type="PackedScene" uid="uid://c70qvwxm8ubpa" path="res://interactable/locker/locker.tscn" id="16_kenfp"]
+[ext_resource type="PackedScene" uid="uid://dpekrbes3hqv5" path="res://level/decals/DeskPC.tscn" id="17_kenfp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(891, 611)
@@ -39,7 +45,7 @@ position = Vector2(817, 128)
 target = "Hub2"
 entrance = "Hub2EngDoor"
 
-[node name="NumberButton" parent="." instance=ExtResource("5_qm4mq")]
+[node name="GravityButton" parent="." instance=ExtResource("5_qm4mq")]
 position = Vector2(237, 542)
 
 [node name="GenericDialogTrigger" parent="." instance=ExtResource("6_iqrbt")]
@@ -61,11 +67,11 @@ position = Vector2(756, 218)
 texture = ExtResource("9_7doqf")
 
 [node name="EngineeringDecal3" type="Sprite2D" parent="."]
-position = Vector2(731, 474)
+position = Vector2(461, 531)
 texture = ExtResource("10_rvhux")
 
 [node name="EngineeringDecal4" type="Sprite2D" parent="."]
-position = Vector2(57, 71)
+position = Vector2(175, 126)
 texture = ExtResource("11_tgwsm")
 
 [node name="EngineeringDecal5" type="Sprite2D" parent="."]
@@ -82,3 +88,28 @@ texture = ExtResource("9_7doqf")
 position = Vector2(387, 71)
 scale = Vector2(-1, 1)
 texture = ExtResource("10_rvhux")
+
+[node name="GravGen" parent="." instance=ExtResource("9_ts8oa")]
+unique_name_in_owner = true
+position = Vector2(308, 496)
+
+[node name="WashingMaschineDecal2" parent="." instance=ExtResource("13_tgwsm")]
+position = Vector2(41, 112)
+
+[node name="WashingMaschineDecal" parent="." instance=ExtResource("13_tgwsm")]
+position = Vector2(13, 112)
+
+[node name="Locker" parent="." instance=ExtResource("14_mqxw2")]
+position = Vector2(73, 121)
+
+[node name="DeskBooks" parent="." instance=ExtResource("15_83b8t")]
+position = Vector2(157, 170)
+
+[node name="Locker2" parent="." instance=ExtResource("16_kenfp")]
+position = Vector2(112, 162)
+
+[node name="DeskPC" parent="." instance=ExtResource("17_kenfp")]
+position = Vector2(453, 555)
+
+[node name="Locker3" parent="." instance=ExtResource("16_kenfp")]
+position = Vector2(764, 482)

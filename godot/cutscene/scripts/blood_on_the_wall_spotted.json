@@ -1,8 +1,5 @@
 [
     {
-        "type": "fade_out_bgm"
-    },
-    {
         "type": "speech",
         "speaker": "player",
         "text": "Wait..."
@@ -15,9 +12,6 @@
     {
         "type": "play_bgm",
         "track": 2
-    },
-    {
-        "type": "fade_in_bgm"
     },
     {
         "type": "speech",

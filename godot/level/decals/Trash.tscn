@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d12mgw6b6prli"]
+
+[ext_resource type="Texture2D" uid="uid://ca21wfy0j7504" path="res://level/decals/trash.png" id="1_41yfj"]
+
+[node name="Locker" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_41yfj")

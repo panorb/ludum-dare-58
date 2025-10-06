@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://c70qvwxm8ubpa"]
 
-[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/interactable.tscn" id="1_lxt6l"]
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_lxt6l"]
 [ext_resource type="SpriteFrames" uid="uid://c8sswt8b2kngk" path="res://interactable/locker/locker.aseprite" id="2_3bbwa"]
 [ext_resource type="Script" uid="uid://dgbu2pwpmsnys" path="res://interactable/locker/locker.gd" id="2_8jaxu"]
 [ext_resource type="AudioStream" uid="uid://c424arc0uxb0s" path="res://interactable/locker/door_open.wav" id="4_f2t5v"]
@@ -10,6 +10,8 @@ size = Vector2(16, 60)
 
 [node name="Locker" instance=ExtResource("1_lxt6l")]
 script = ExtResource("2_8jaxu")
+dialog = "lore_locker"
+dialog_empty = "locker_empty"
 
 [node name="ButtonPromptSprite" parent="." index="0"]
 visible = true
