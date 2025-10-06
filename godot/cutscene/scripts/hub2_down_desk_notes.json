@@ -1,0 +1,21 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Some of this stuff looks interesting..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "That is so irresponsible..."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hub2_desk"
+	}
+]

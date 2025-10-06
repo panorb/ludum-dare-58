@@ -1,0 +1,21 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "So much stuff, let's see..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "I wonder if he knew..."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "eng_desk"
+	}
+]
