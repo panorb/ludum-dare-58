@@ -43,6 +43,7 @@ func execute_instruction():
 			advance_cooldown = 2.0
 			var bubble_text = current_instruction["text"]
 			var speaker = "speaker_{0}".format([current_instruction["speaker"]])
+			print(speaker)
 			%Dialog.display_bubble(bubble_text, speaker)
 		"item_pickup":
 			var item = current_instruction["item"]
