@@ -1,8 +1,9 @@
 extends Node2D
 
 func _ready() -> void:
-	set_level("Level1", "")
+	set_level("Hangar", "")
 	add_to_group("game")
+	ProjectSettings.set_setting("physics/2d/default_gravity", 490)
 
 func set_level(level_name, entrance):
 	var level = get_node(level_name)

@@ -22,7 +22,7 @@ tile_set = ExtResource("1_7lnir")
 position = Vector2(402, 240)
 
 [node name="LockWrench" parent="." instance=ExtResource("3_vkbyq")]
-position = Vector2(75, 241)
+position = Vector2(607, 274)
 
 [node name="CameraBounds" type="Area2D" parent="."]
 visible = false
