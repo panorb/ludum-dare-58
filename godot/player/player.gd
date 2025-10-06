@@ -58,15 +58,21 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = -385
 	
+	if abs(velocity.y) > 2:
+		$AnimatedSprite2D.play("jump")
 	if abs(velocity.y) < 2 and $AnimatedSprite2D.animation == "jump":
 		$AnimatedSprite2D.play("idle")
 	
-	if abs(velocity.x) > 10 and $AnimatedSprite2D.animation == "idle":
+	if abs(velocity.x) > 10 and is_on_floor() and $AnimatedSprite2D.animation == "idle":
 		$AnimatedSprite2D.play("running")
-	elif abs(velocity.x) < 10 and $AnimatedSprite2D.animation == "running":
+	elif abs(velocity.x) < 10 and is_on_floor() and $AnimatedSprite2D.animation == "running":
 		$AnimatedSprite2D.play("idle")
 	
 	if abs(velocity.x) > 10:
+		if velocity.x < 0:
+			$PointLightSpot.scale.x = -1.0
+		else:
+			$PointLightSpot.scale.x = 1.0
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 	
 	velocity.x = horizontal_velocity
