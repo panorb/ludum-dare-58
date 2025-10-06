@@ -67,7 +67,9 @@ for playing"
 		"type": "speech",
 		"speaker": "void",
 		"text": "The End"
-	},
+	},{
+		"type":"credits_passed"
+	}
 	
 	
 ]

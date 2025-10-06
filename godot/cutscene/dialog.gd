@@ -66,6 +66,8 @@ func iter_print(msg):
 func _process(delta: float) -> void:
 	# var player : CharacterBody2D = get_tree().get_first_node_in_group("player")
 	var camera: Camera2D = get_tree().get_first_node_in_group("camera")
+	if not camera:
+		return
 
 	# current speaker node: e.g.: alert node oder player,
 	# current_speech_bubble_node: displayed textbox

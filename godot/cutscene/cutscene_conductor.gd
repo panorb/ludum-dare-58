@@ -92,6 +92,8 @@ func execute_instruction():
 		"unfreeze":
 			%Player.unfreeze()
 			advance_cutscene()
+		"credits_passed":
+			%Player.queue_free()
 		_:
 			print("Cutscene encountered unknown type: '{0}'".format([instruction_type]))
 			advance_cutscene()
