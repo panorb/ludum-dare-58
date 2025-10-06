@@ -76,6 +76,7 @@ script = ExtResource("4_4fuuu")
 
 [node name="ItemPickupPlayer" type="AudioStreamPlayer" parent="CanvasLayer/Inventory"]
 stream = ExtResource("15_mhvfb")
+volume_db = 2.0
 
 [node name="Items" type="HBoxContainer" parent="CanvasLayer/Inventory"]
 layout_mode = 0
