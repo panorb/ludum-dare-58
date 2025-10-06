@@ -12,6 +12,16 @@
 		"speaker": "player",
 		"text": "That's... A c- corpse..."
 	},
+    {
+        "type": "fade_out_bgm"
+    },
+    {
+        "type": "play_bgm",
+        "track": 3
+    },
+    {
+        "type": "fade_in_bgm"
+    },
 	{
 		"type": "speech",
 		"speaker": "player",
@@ -34,6 +44,11 @@
 		"type": "speech",
 		"speaker": "player",
 		"text": "What happened to you?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Preserved by the cold..."
 	},
 	{
 		"type": "wait",

@@ -1,0 +1,37 @@
+[
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Wait..."
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "That is..."
+    },
+    {
+        "type": "fade_out_bgm"
+    },
+    {
+        "type": "play_bgm",
+        "track": 2
+    },
+    {
+        "type": "fade_in_bgm"
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Looks like it's... blood..."
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Maybe... someone got hurt?"
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Or maybe... attacked..."
+    },
+]

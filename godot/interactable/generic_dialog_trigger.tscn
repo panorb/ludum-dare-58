@@ -9,10 +9,7 @@ radius = 23.194826
 [node name="GenericDialogTrigger" groups=["wrench"] instance=ExtResource("1_bbdkj")]
 collision_mask = 512
 script = ExtResource("2_qxc21")
-dialog = "silence"
+dialogs = Array[String]([])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CircleShape2D_x5w8o")
-
-[node name="ButtonPromptSprite" parent="." index="1"]
-visible = true
