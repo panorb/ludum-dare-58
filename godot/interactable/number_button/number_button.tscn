@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://c0kdilisgciv0" path="res://interactable/number_button/button_press.wav" id="6_ut7dh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qjs28"]
-radius = 24.0
+radius = 14.0
 
 [node name="NumberButton" instance=ExtResource("1_jteae")]
 script = ExtResource("2_iapa3")
