@@ -1,0 +1,21 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "This computer has notes on it..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Goes to show where you end up if you leave the thinking to a machine."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hub2_pc"
+	}
+]

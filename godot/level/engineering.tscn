@@ -113,3 +113,15 @@ position = Vector2(453, 555)
 
 [node name="Locker3" parent="." instance=ExtResource("16_kenfp")]
 position = Vector2(764, 482)
+
+[node name="GenericDialogTrigger2" parent="." instance=ExtResource("6_iqrbt")]
+position = Vector2(157, 169)
+dialogs = Array[String](["engineering_desk_notes"])
+
+[node name="GenericDialogTrigger3" parent="." instance=ExtResource("6_iqrbt")]
+position = Vector2(38, 105)
+dialogs = Array[String](["engineering_washing_machines"])
+
+[node name="GenericDialogTrigger4" parent="." instance=ExtResource("6_iqrbt")]
+position = Vector2(454, 554)
+dialogs = Array[String](["engineering_down_pc"])

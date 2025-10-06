@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bbl8q65s446h1"]
+[gd_scene load_steps=11 format=4 uid="uid://bbl8q65s446h1"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_7x5mv"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_agyjn"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="5_jbg1t"]
 [ext_resource type="PackedScene" uid="uid://clfj13dv2fngx" path="res://interactable/charging_station/charging_station.tscn" id="6_agyjn"]
 [ext_resource type="PackedScene" uid="uid://dpekrbes3hqv5" path="res://level/decals/DeskPC.tscn" id="7_okog5"]
+[ext_resource type="PackedScene" uid="uid://cf3j4l7754kvt" path="res://interactable/generic_dialog_trigger.tscn" id="9_jbg1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(511, 315)
@@ -55,3 +56,7 @@ position = Vector2(179, 145)
 
 [node name="DeskPC" parent="." instance=ExtResource("7_okog5")]
 position = Vector2(201, 171)
+
+[node name="GenericDialogTrigger" parent="." instance=ExtResource("9_jbg1t")]
+position = Vector2(201, 171)
+dialogs = Array[String](["goal_pcaa"])

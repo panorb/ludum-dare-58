@@ -28,7 +28,21 @@
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "...Nothing of interest..."
+		"text": "A note..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Looks like they were completely isolated..."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "pit_locker"
 	},
 	{
 		"type": "signal",
