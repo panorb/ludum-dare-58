@@ -93,9 +93,10 @@ func execute_instruction():
 			%Player.unfreeze()
 			advance_cutscene()
 		"hide_logo":
-			var logo = get_tree().get_first_node_in_group("logo")
+			var logo_nodes = get_tree().get_nodes_in_group("logo")
 			var tween = get_tree().create_tween()
-			tween.tween_property(logo, "self_modulate", Color.TRANSPARENT, 3.0).set_trans(Tween.TRANS_CUBIC)
+			for logo_node in logo_nodes:
+				tween.tween_property(logo_node, "modulate", Color.TRANSPARENT, 3.0).set_trans(Tween.TRANS_CUBIC)
 			advance_cutscene()
 		"credits_passed":
 			%Player.queue_free()

@@ -10,6 +10,26 @@ func _ready() -> void:
 	#get_tree().create_timer(20.0).timeout.connect($BGM.play_track.bind(2))
 	#get_tree().create_timer(40.0).timeout.connect($BGM.play_track.bind(3))
 	#get_tree().create_timer(65.0).timeout.connect($BGM.play_track.bind(4))
+	_flicker_controls_explanation()
+
+func _flicker_controls_explanation():
+	await get_tree().create_timer(0.15).timeout
+	%ControlsExplanation.visible = false
+	await get_tree().create_timer(0.15).timeout
+	%ControlsExplanation.visible = true
+	await get_tree().create_timer(0.15).timeout
+	%ControlsExplanation.visible = false
+	await get_tree().create_timer(0.15).timeout
+	%ControlsExplanation.visible = true
+	await get_tree().create_timer(0.15).timeout
+	%ControlsExplanation.visible = false
+	await get_tree().create_timer(0.15).timeout
+	%ControlsExplanation.visible = true
+	await get_tree().create_timer(0.15).timeout
+	%ControlsExplanation.visible = false
+	await get_tree().create_timer(0.15).timeout
+	%ControlsExplanation.visible = true
+	
 
 func set_level(level_name, entrance):
 	var level = get_node(level_name)
