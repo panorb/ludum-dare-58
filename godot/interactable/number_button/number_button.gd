@@ -1,3 +1,4 @@
+class_name NumberButton
 extends Interactable
 
 var current_num = -1
