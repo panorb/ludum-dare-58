@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var correct_combination : String = "123"
-@export var on_puzzle_solve_group : String = ""
+@export var on_puzzle_solve_group : String = "platform"
 
 @onready var number_buttons : Array[NumberButton] = [$NumberButton1, $NumberButton2, $NumberButton3]
 var current_combination = "AAA"

@@ -1,5 +1,4 @@
 [gd_scene load_steps=12 format=4 uid="uid://c4bwtwtturkci"]
-[gd_scene load_steps=15 format=4 uid="uid://c4bwtwtturkci"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_s7anl"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_5n5hi"]
