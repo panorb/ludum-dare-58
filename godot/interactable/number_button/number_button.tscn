@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://cduq0762l8qtd"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/interactable.tscn" id="1_jteae"]
+[ext_resource type="Script" uid="uid://c3ske53xxf22x" path="res://interactable/number_button/number_button.gd" id="2_iapa3"]
+[ext_resource type="SpriteFrames" uid="uid://b2vu6iaytbab6" path="res://interactable/number_button/button.aseprite" id="2_oo26l"]
+[ext_resource type="SpriteFrames" uid="uid://cvwsetokqklp1" path="res://interactable/number_button/eight_segment_display.aseprite" id="3_qjs28"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qjs28"]
+radius = 24.0
+
+[node name="NumberButton" instance=ExtResource("1_jteae")]
+script = ExtResource("2_iapa3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_qjs28")
+
+[node name="ButtonSprite" type="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = ExtResource("2_oo26l")
+animation = &"relaxed"
+
+[node name="EightSegmentDisplaySprite" type="AnimatedSprite2D" parent="." index="3"]
+position = Vector2(0, -51)
+sprite_frames = ExtResource("3_qjs28")
+animation = &"none"
+autoplay = "none"

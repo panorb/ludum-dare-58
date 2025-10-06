@@ -8,6 +8,7 @@
 size = Vector2(2, 62)
 
 [node name="AutoDoor" instance=ExtResource("1_vfvxm")]
+collision_mask = 512
 script = ExtResource("2_icgse")
 target = "Level1"
 entrance = "Level1Entrance"

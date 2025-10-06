@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://chqut2y2ka2lg" path="res://interactable/button_prompt.png" id="2_if3l3"]
 
 [node name="Interactable" type="Area2D"]
-collision_layer = 0
-collision_mask = 512
+collision_layer = 2048
+collision_mask = 0
 script = ExtResource("1_pve3w")
 
 [node name="ButtonPromptSprite" type="Sprite2D" parent="."]
