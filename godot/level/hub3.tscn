@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://dirljqs1ymrbq"]
+[gd_scene load_steps=13 format=4 uid="uid://dirljqs1ymrbq"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_nf67l"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_d0e1r"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dpekrbes3hqv5" path="res://level/decals/DeskPC.tscn" id="9_d0e1r"]
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="9_nf67l"]
 [ext_resource type="PackedScene" uid="uid://bvsoprj0obnjn" path="res://level/decals/DeskBooks.tscn" id="10_d0e1r"]
+[ext_resource type="Texture2D" uid="uid://c5qp6854i84hw" path="res://level/first_aid.png" id="11_lwy0b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(542, 416)
@@ -58,4 +59,8 @@ position = Vector2(-178, 249)
 position = Vector2(-128, 234)
 
 [node name="DeskBooks" parent="." instance=ExtResource("10_d0e1r")]
-position = Vector2(-4, 171)
+position = Vector2(-34, 171)
+
+[node name="FirstAid" type="Sprite2D" parent="."]
+position = Vector2(30, 160)
+texture = ExtResource("11_lwy0b")

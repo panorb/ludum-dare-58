@@ -92,6 +92,11 @@ func execute_instruction():
 		"unfreeze":
 			%Player.unfreeze()
 			advance_cutscene()
+		"hide_logo":
+			var logo = get_tree().get_first_node_in_group("logo")
+			var tween = get_tree().create_tween()
+			tween.tween_property(logo, "self_modulate", Color.TRANSPARENT, 3.0).set_trans(Tween.TRANS_CUBIC)
+			advance_cutscene()
 		_:
 			print("Cutscene encountered unknown type: '{0}'".format([instruction_type]))
 			advance_cutscene()
