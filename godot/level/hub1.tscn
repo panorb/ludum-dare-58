@@ -19,7 +19,7 @@ script = ExtResource("1_1dmqt")
 
 [node name="BackgroundTileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(0, 32)
-tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAAD+/wAAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAAD+/wAAAAAAAAAAAAABAAEAAAACAAEAAAAAAAEAAAAAAAEAAAD//wEAAAAAAAEAAAD+/wEAAAAAAAEAAAA=")
 tile_set = ExtResource("2_kq08c")
 
 [node name="HangarDecalSign" type="Sprite2D" parent="."]
