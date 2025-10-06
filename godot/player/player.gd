@@ -46,7 +46,7 @@ func _process(delta: float) -> void:
 		horizontal_velocity -= 200
 	if Input.is_action_pressed("move_right"):
 		horizontal_velocity += 200
-	if Input.is_action_just_pressed("jump"):
+	if is_on_floor() and Input.is_action_just_pressed("jump"):
 		$AnimatedSprite2D.play("jump")
 		velocity.y = -300
 	
