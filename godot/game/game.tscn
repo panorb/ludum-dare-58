@@ -121,6 +121,7 @@ script = ExtResource("17_dxwpq")
 
 [node name="BGM1Player" type="AudioStreamPlayer" parent="BGM"]
 stream = ExtResource("17_u8s88")
+bus = &"music"
 
 [node name="BGM2Player" type="AudioStreamPlayer" parent="BGM"]
 stream = ExtResource("18_dxwpq")
