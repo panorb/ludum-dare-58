@@ -36,9 +36,9 @@ func unlock_entry(entry):
 	#var new_entry = journal_entry_scene.instantiate()
 	new_entry.set_text(entries[entry])
 	new_entry.unlock()
+	$NewEntryPlayer.play()
 	#new_entry.set_text(entries[entry])
 	unread.append(new_entry)
-	
 
 func has_entry(entry):
 	return entry in unlocked

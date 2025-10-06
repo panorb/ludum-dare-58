@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://nlpc516xkojm"]
+[gd_scene load_steps=4 format=3 uid="uid://nlpc516xkojm"]
 
 [ext_resource type="Script" uid="uid://c3obywti5j7sq" path="res://game/journal.gd" id="1_7xp7q"]
 [ext_resource type="PackedScene" uid="uid://jgtu27dq8c4k" path="res://game/journal_panel.tscn" id="2_7qoqf"]
+[ext_resource type="AudioStream" uid="uid://t6lebqe54gtq" path="res://ui/journal/new_journal_entry.wav" id="3_oraf3"]
 
 [node name="Journal" type="Control"]
 layout_mode = 3
@@ -44,3 +45,7 @@ anchor_bottom = 8.0
 [node name="JournalPanel" parent="CenterContainer" instance=ExtResource("2_7qoqf")]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="NewEntryPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_oraf3")
+bus = &"effects"
