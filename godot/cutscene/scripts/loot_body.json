@@ -1,81 +1,86 @@
 [
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "... .."
-    },
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "!!! Thats.... a dead body!"
-    },
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "What the fuck happened here?"
-    },
-    {
-        "type": "player_animation",
-        "animation": "kneel"
-    },
-    {
-        "type": "wait",
-        "time": 0.7
-    },
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "What happened to you?"
-    },
-    {
-        "type": "wait",
-        "time": 0.3
-    },
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "....."
-    },
-    {
-        "type": "wait",
-        "speaker": "player",
-        "time": 0.6
-    },
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "You have an id card..."
-    },
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "I think you won't need it anymore..."
-    },
-    {
-        "type": "player_animation",
-        "speaker": "player",
-        "animation": "kneel_pickup"
-    },
-    {
-        "type": "signal",
-        "value": "body_state_switch"
-    },
-    {
-        "type": "item_pickup",
-        "item": "id_card"
-    },
-    {
-        "type": "wait",
-        "time": 0.2
-    },
-    {
-        "type": "speech",
-        "speaker": "player",
-        "text": "Sleep tight, buddy..."
-    },
-    {
-        "type": "player_animation",
-        "animation": "idle",
-        "wait": false
-    }
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "... .."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "That's... A c- corpse..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "What the..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "What happened here?"
+	},
+	{
+		"type": "player_animation",
+		"animation": "kneel"
+	},
+	{
+		"type": "wait",
+		"time": 0.7
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "What happened to you?"
+	},
+	{
+		"type": "wait",
+		"time": 0.3
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "wait",
+		"speaker": "player",
+		"time": 0.6
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "You have an id card..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "I think you won't need it anymore..."
+	},
+	{
+		"type": "player_animation",
+		"speaker": "player",
+		"animation": "kneel_pickup"
+	},
+	{
+		"type": "signal",
+		"value": "body_state_switch"
+	},
+	{
+		"type": "item_pickup",
+		"item": "id_card"
+	},
+	{
+		"type": "wait",
+		"time": 0.2
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Sleep tight, buddy..."
+	},
+	{
+		"type": "player_animation",
+		"animation": "idle",
+		"wait": false
+	}
 ]
