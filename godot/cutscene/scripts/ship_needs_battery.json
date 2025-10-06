@@ -21,5 +21,9 @@
     {
         "type": "item_pickup",
         "item": "cable"
+    },
+    {
+        "type": "item_pickup",
+        "item": "id_card1"
     }
 ]

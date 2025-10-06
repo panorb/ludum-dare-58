@@ -5,6 +5,40 @@
 		"text": "A card reader?"
 	},
 	{
+		"type": "wait",
+		"time": 0.25
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Hm... let me try..."
+	},
+	{
+		"type": "wait",
+		"time": 0.8
+	},
+	{
+		"type": "signal",
+		"value": "reject_card"
+	},
+	{
+		"type": "wait",
+		"time": 0.2
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Thought so."
+	},
+	{
+		"type": "wait",
+		"time": 0.6
+	},
+	{
+		"type": "signal",
+		"value": "return_to_idle"
+	},
+	{
 		"type": "speech",
 		"speaker": "player",
 		"text": "Seems like it'll open this door..."
