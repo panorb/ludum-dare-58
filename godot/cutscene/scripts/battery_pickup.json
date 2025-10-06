@@ -35,7 +35,7 @@
         "text": "...mine."
     },
     {
-        "type": "idle",
+        "type": "player_animation",
         "animation": "idle",
         "wait": false
     }
