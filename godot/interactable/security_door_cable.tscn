@@ -1,10 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://drjtqmsp1anxe"]
+[gd_scene load_steps=13 format=3 uid="uid://drjtqmsp1anxe"]
 
-[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_k4sm5"]
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/interactable.tscn" id="1_k4sm5"]
 [ext_resource type="Script" uid="uid://bj4ukpmrgw763" path="res://interactable/security_door_cable.gd" id="2_k4sm5"]
 [ext_resource type="SpriteFrames" uid="uid://dc8pyngg3rjhx" path="res://interactable/card_reader/card_reader.aseprite" id="3_rg2x4"]
 [ext_resource type="SpriteFrames" uid="uid://cwg74i3d57bhu" path="res://interactable/security_door/security_door_2tile.aseprite" id="4_dfd60"]
 [ext_resource type="SpriteFrames" uid="uid://b4eqtia3srse3" path="res://interactable/security_door/electrical_panel.aseprite" id="5_3u267"]
+[ext_resource type="AudioStream" uid="uid://cp0kbx5ediu4t" path="res://interactable/extending_platform/hydraulics_clink_1.wav" id="6_rg2x4"]
+[ext_resource type="AudioStream" uid="uid://c8po1g2xt62ve" path="res://interactable/extending_platform/hydraulics_clink_2.wav" id="7_7rlkt"]
+[ext_resource type="AudioStream" uid="uid://dt3guxhajkcap" path="res://interactable/extending_platform/hydraulics_clink_3.wav" id="8_d66dr"]
+[ext_resource type="AudioStream" uid="uid://daqixpmut6hyq" path="res://interactable/extending_platform/hydraulics_clink_4.wav" id="9_n7xkb"]
+[ext_resource type="AudioStream" uid="uid://bv03siy5pmyor" path="res://interactable/extending_platform/hydraulics_extend.wav" id="10_7rlkt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x5w8o"]
 radius = 17.029387
@@ -45,3 +50,41 @@ animation = &"opening"
 position = Vector2(29, -25)
 sprite_frames = ExtResource("5_3u267")
 animation = &"broken"
+
+[node name="Clinks" type="Node2D" parent="." index="6"]
+position = Vector2(72, -32)
+
+[node name="ClinkPlayer1" type="AudioStreamPlayer2D" parent="Clinks" index="0"]
+stream = ExtResource("6_rg2x4")
+volume_db = 0.5
+max_distance = 140.0
+bus = &"effects"
+area_mask = 512
+
+[node name="ClinkPlayer2" type="AudioStreamPlayer2D" parent="Clinks" index="1"]
+stream = ExtResource("7_7rlkt")
+volume_db = 0.5
+max_distance = 140.0
+bus = &"effects"
+area_mask = 512
+
+[node name="ClinkPlayer3" type="AudioStreamPlayer2D" parent="Clinks" index="2"]
+stream = ExtResource("8_d66dr")
+volume_db = 0.5
+max_distance = 140.0
+bus = &"effects"
+area_mask = 512
+
+[node name="ClinkPlayer4" type="AudioStreamPlayer2D" parent="Clinks" index="3"]
+position = Vector2(72, -32)
+stream = ExtResource("9_n7xkb")
+volume_db = 0.5
+max_distance = 140.0
+bus = &"effects"
+area_mask = 512
+
+[node name="HydraulicsPlayer" type="AudioStreamPlayer2D" parent="." index="7"]
+position = Vector2(72, -32)
+stream = ExtResource("10_7rlkt")
+max_distance = 70.0
+area_mask = 512

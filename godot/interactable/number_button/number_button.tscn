@@ -26,16 +26,11 @@ sprite_frames = ExtResource("3_qjs28")
 animation = &"none"
 autoplay = "none"
 
-[node name="NumberChangeSound" type="AudioStreamPlayer2D" parent="." index="4"]
-position = Vector2(0, -51)
+[node name="NumberChangeSound" type="AudioStreamPlayer" parent="." index="4"]
 stream = ExtResource("5_tmn40")
-max_distance = 180.0
-attenuation = 0.5
 bus = &"effects"
 
-[node name="ButtonPressSound" type="AudioStreamPlayer2D" parent="." index="5"]
+[node name="ButtonPressSound" type="AudioStreamPlayer" parent="." index="5"]
 stream = ExtResource("6_ut7dh")
 volume_db = -3.0
-max_distance = 180.0
-attenuation = 0.5
 bus = &"effects"

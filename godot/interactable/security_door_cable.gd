@@ -41,6 +41,8 @@ func on_trigger():
 func on_trigger_failed():
 	get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("open_security_door3_fail")
 
+var cur_clink = 0
+
 func _process(delta: float) -> void:
 	if not is_custom_playing:
 		return
@@ -51,4 +53,12 @@ func _process(delta: float) -> void:
 		if frame_index >= frames.size():
 			frame_index = 0
 		$DoorSprite.frame = frames[frame_index]
+		if frame_index == 0:
+			$HydraulicsPlayer.play()
+		
+		if frames[frame_index] in [0, 7]:
+			cur_clink += 1
+			cur_clink %= $Clinks.get_child_count()
+			
+			$Clinks.get_child(cur_clink).play()
 	
