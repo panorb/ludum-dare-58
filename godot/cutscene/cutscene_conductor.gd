@@ -38,6 +38,7 @@ func execute_instruction():
 	
 	match instruction_type:
 		"speech":
+			%Dialog.visible = true
 			advance_cooldown = 2.0
 			var bubble_text = current_instruction["text"]
 			var speaker = "speaker_{0}".format([current_instruction["speaker"]])
@@ -83,6 +84,7 @@ func _on_cutscene_end():
 
 func advance_cutscene():
 	cur_instruction += 1
+	%Dialog.visible = false
 	
 	if cur_instruction < len(cutscene_scripts[active_dialog_name]):
 		execute_instruction()
