@@ -1,0 +1,17 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Huh? My ID card doesn't work here."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Doesn't seem to be the card reader - maybe I need a different one."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Let's see if I can find another ID card somewhere else."
+	}
+]
