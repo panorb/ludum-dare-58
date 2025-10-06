@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://bdl1mevsuxsfb"]
+[gd_scene load_steps=25 format=4 uid="uid://bdl1mevsuxsfb"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_1dmqt"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_kq08c"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://c70qvwxm8ubpa" path="res://interactable/locker/locker.tscn" id="20_bic5i"]
 [ext_resource type="PackedScene" uid="uid://dbjyobn4r3yrr" path="res://level/decals/LockerOpenEmpty.tscn" id="21_lqi7u"]
 [ext_resource type="PackedScene" uid="uid://c8qpouc01sroc" path="res://level/decals/Locker.tscn" id="22_lqi7u"]
+[ext_resource type="Texture2D" uid="uid://b2nuneje5u50u" path="res://level/decals/sticky_note.png" id="23_3iq2g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(542, 416)
@@ -128,3 +129,11 @@ dialogs = Array[String](["hub1_desk"])
 [node name="GenericDialogTrigger4" parent="." instance=ExtResource("13_djv7d")]
 position = Vector2(-46, 201)
 dialogs = Array[String](["hub1_pc"])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(105, 98)
+texture = ExtResource("23_3iq2g")
+
+[node name="GenericDialogTrigger5" parent="." instance=ExtResource("13_djv7d")]
+position = Vector2(105, 98)
+dialogs = Array[String](["note_hint"])

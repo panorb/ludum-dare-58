@@ -1,0 +1,17 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "It says:"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "\"Hello Sarah! Couldn't help but notice you left your ID laying around on your desk again.\""
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "\"With the recent hick-ups in our navigation, i bet it slid off to the side into your heap of stuff again. You should really clean your place up...\""
+	}
+]
