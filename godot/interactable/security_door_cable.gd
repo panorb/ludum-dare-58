@@ -35,7 +35,7 @@ func on_trigger():
 	$HydraulicsPlayer.play()
 	open = true
 	$StaticBody2D.queue_free()
-	await $DoorSprite.animation_finished
+	#await $DoorSprite.animation_finished
 	$DoorSprite.play("open")
 
 func on_trigger_failed():
