@@ -2,6 +2,31 @@
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "ToDo!"
+		"text": "Whew..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Barely managed to land my ship before the batteries run out."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "What is this place? Seems abandoned..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "No signs of life on the scanners either. But stll some power going."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Well, let's find a way to recharge my ship and get going again."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "I should explore and see what I can find..."
 	}
 ]

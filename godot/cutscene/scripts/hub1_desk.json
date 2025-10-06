@@ -1,0 +1,46 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "There's a bunch of notes strewn about..."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Seems like the crew made a few plans on how they could handle the repairs after the asteroid collision."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Oh?"
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "They talk about passengers..."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Wait..."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "This ship's supposed to carry a few hundred people in cryo pods!"
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Then... why did the scanners not pick up any life-signs?"
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "I guess they're not calibrated for people in cryosleep..."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hub1_desk"
+	}
+]

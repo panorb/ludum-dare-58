@@ -1,0 +1,21 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "There's a sticky note here..."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Apparently there's a new access code for the retractable platform down in engineering."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "I'll note it down in my journal."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hangar_sticky"
+	}
+]

@@ -1,0 +1,31 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "A personal diary? Seems to belong to a woman named Sarah."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Most of this is not really relevant. Only notes about her boyfrend Adam."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Oh, this is interesting."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "\"I don't trust SAI. Not just because it's an AI system, but it really has been behaving strangly since shortly after the collision\""
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "\"Today it even sealed the access to the bioreactor. I haven't seen any of the repair drones on this side either.\""
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hub3_desk"
+	}
+]

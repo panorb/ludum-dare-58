@@ -1,0 +1,31 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Looks like this is the desk of the ship's doctor?"
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "The final log entry is still accessible..."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "\"With the shuttle repaired and the trajectory that Edgar worked out, we can go and get help.\""
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "\"Robert wants to stay behind to fix the antenna.\""
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Seems like everyone except this Robert guy took of with the shuttle."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hub3_pc"
+	}
+]

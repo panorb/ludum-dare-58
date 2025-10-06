@@ -1,0 +1,16 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Safety instructions for shuttle docking operations."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Seems the ship's supposed to come with it's own shuttle, but it's evidently not in the hangar."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hangar_sign"
+	}
+]

@@ -59,3 +59,15 @@ position = Vector2(-128, 234)
 
 [node name="DeskBooks" parent="." instance=ExtResource("10_d0e1r")]
 position = Vector2(-4, 171)
+
+[node name="GenericDialogTrigger2" parent="." instance=ExtResource("7_q4b2k")]
+position = Vector2(-122, 232)
+dialogs = Array[String](["hub3_pc"])
+
+[node name="GenericDialogTrigger3" parent="." instance=ExtResource("7_q4b2k")]
+position = Vector2(-8, 168)
+dialogs = Array[String](["hub3_desk"])
+
+[node name="GenericDialogTrigger3" parent="GenericDialogTrigger3" instance=ExtResource("7_q4b2k")]
+position = Vector2(69, -12)
+dialogs = Array[String](["hub3_medpack"])

@@ -44,6 +44,8 @@ func unlock_entry(entry):
 	if entry not in entries.keys():
 		print("ERROR: unknown journal entry key "+entry)
 		return
+	if entry in unlocked:
+		return
 	unlocked.append(entry)
 	$ToastPanel.visible = true
 	toast_timer.start()

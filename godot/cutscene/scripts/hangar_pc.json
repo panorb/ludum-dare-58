@@ -1,0 +1,36 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "There's a log entry from a guy named Edgar."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Seems he was the pilot of this ship?"
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "And the ship got apparently hit by an asteroid - explains why everything is damaged like this."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Oh..."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "So he got woken by the proximity alert just before the collision?"
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Sleeping while flying is never a good idea..."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hangar_pc_log"
+	}
+]

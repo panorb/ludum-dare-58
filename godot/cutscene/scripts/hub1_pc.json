@@ -1,0 +1,21 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "A log entry from the ship's doctor, Sarah."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "\"Edgar got under Robert's skin again, and I had to patch him up.\""
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "\"The two never got along, but this is a crisis. Why can't they just work together?\""
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hub1_log"
+	}
+]
