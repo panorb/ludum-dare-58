@@ -25,6 +25,7 @@ func is_playing_cutscene():
 
 func start_cutscene(dialog_name):
 	assert(dialog_name in cutscene_scripts)
+	%Player.freeze()
 	cur_instruction = 0
 	
 	active_dialog_name = dialog_name
@@ -80,6 +81,7 @@ func _on_cutscene_end():
 	%Dialog.hide_bubble()
 	active_dialog_name = ""
 	cur_instruction = 0
+	%Player.unfreeze()
 	cutscene_finished.emit()
 
 func advance_cutscene():
