@@ -59,4 +59,4 @@ target = "Hub1"
 entrance = "HangarDoor"
 
 [node name="Ship" parent="." instance=ExtResource("11_5n5hi")]
-position = Vector2(-125, 320)
+position = Vector2(-93, 320)

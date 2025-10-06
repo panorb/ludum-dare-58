@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bbl8q65s446h1" path="res://level/goal.tscn" id="11_ee6o4"]
 [ext_resource type="PackedScene" uid="uid://qtovlymu5q0f" path="res://level/engineering.tscn" id="13_vsp63"]
 [ext_resource type="PackedScene" uid="uid://b024hmnwlqxra" path="res://level/pit.tscn" id="15_hb504"]
-[ext_resource type="Script" uid="uid://stl5qw2hebrj" path="res://game/bgm.gd" id="17_dxwpq"]
+[ext_resource type="Script" path="res://game/bgm.gd" id="17_dxwpq"]
 [ext_resource type="AudioStream" uid="uid://0mhugj4rrd61" path="res://bgm/into-the-unknown.ogg" id="17_u8s88"]
 [ext_resource type="AudioStream" uid="uid://ci674f5k3jsog" path="res://bgm/scared-of-shadows.ogg" id="18_dxwpq"]
 [ext_resource type="AudioStream" uid="uid://d4he3pg6a6sw4" path="res://bgm/the-shadow-beat.ogg" id="19_mhvfb"]
@@ -56,7 +56,7 @@ position = Vector2(6126, 171)
 
 [node name="Player" parent="." instance=ExtResource("1_l1rk1")]
 unique_name_in_owner = true
-position = Vector2(195, 1103)
+position = Vector2(227, 1103)
 
 [node name="CutsceneConductor" type="Node" parent="."]
 unique_name_in_owner = true
