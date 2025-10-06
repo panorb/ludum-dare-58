@@ -13,9 +13,5 @@
         "type": "speech",
         "speaker": "player",
         "text": "As soon as I've found some way to recharge, I'm out of here."
-    },
-	{
-		"type": "unlock_journal_entry",
-		"entry": "got_wrench"
-	}
+    }
 ]
