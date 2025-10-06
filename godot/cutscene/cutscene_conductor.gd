@@ -82,6 +82,10 @@ func execute_instruction():
 		"play_bgm":
 			var track = current_instruction["track"]
 			%BGM.play_track(track)
+			advance_cutscene()
+		"unfreeze":
+			%Player.unfreeze()
+			advance_cutscene()
 		_:
 			print("Cutscene encountered unknown type: '{0}'".format([instruction_type]))
 			advance_cutscene()

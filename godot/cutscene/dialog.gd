@@ -22,6 +22,8 @@ func display_bubble(text: String, speaker: String):
 	
 
 func hide_bubble():
+	if current_speech_bubble_node == null:
+		return
 	current_speech_bubble_node.queue_free()
 	current_speech_bubble_node = null
 	# $SpeechBubble.visible = false
