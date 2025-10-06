@@ -59,4 +59,4 @@ position = Vector2(201, 171)
 
 [node name="GenericDialogTrigger" parent="." instance=ExtResource("9_jbg1t")]
 position = Vector2(201, 171)
-dialogs = Array[String](["goal_pcaa"])
+dialogs = Array[String](["goal_pc"])
