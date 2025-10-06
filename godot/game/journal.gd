@@ -18,7 +18,7 @@ func _ready():
 	$ToastPanel.visible = false
 	%JournalPanel.visible = false
 	toast_timer.one_shot = true
-	toast_timer.wait_time = 2.0
+	toast_timer.wait_time = 3.0
 	toast_timer.timeout.connect(_on_timer_timeout)
 	for entry in entries.keys():
 		var new_entry = journal_entry_scene.instantiate()

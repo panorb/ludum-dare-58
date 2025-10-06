@@ -17,13 +17,5 @@
 	{
 		"type": "unlock_journal_entry",
 		"entry": "got_wrench"
-	},
-    {
-        "type": "item_pickup",
-        "item": "cable"
-    },
-    {
-        "type": "item_pickup",
-        "item": "id_card1"
-    }
+	}
 ]
