@@ -73,6 +73,15 @@ func execute_instruction():
 			var entry = current_instruction["entry"]
 			%Journal.unlock_entry(entry)
 			advance_cutscene()
+		"fade_out_bgm":
+			%BGM.fade_out_bgm()
+			advance_cutscene()
+		"fade_in_bgm":
+			%BGM.fade_in_bgm()
+			advance_cutscene()
+		"play_bgm":
+			var track = current_instruction["track"]
+			%BGM.play_track(track)
 		_:
 			print("Cutscene encountered unknown type: '{0}'".format([instruction_type]))
 			advance_cutscene()

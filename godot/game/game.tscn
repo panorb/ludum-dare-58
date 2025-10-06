@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://06ul0wadfcqp"]
+[gd_scene load_steps=22 format=3 uid="uid://06ul0wadfcqp"]
 
 [ext_resource type="PackedScene" uid="uid://cqo6h223cwhjb" path="res://player/player.tscn" id="1_l1rk1"]
 [ext_resource type="Script" uid="uid://cyst85hplajhk" path="res://game/game.gd" id="1_u5opy"]
@@ -16,6 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://bbl8q65s446h1" path="res://level/goal.tscn" id="11_ee6o4"]
 [ext_resource type="PackedScene" uid="uid://qtovlymu5q0f" path="res://level/engineering.tscn" id="13_vsp63"]
 [ext_resource type="PackedScene" uid="uid://b024hmnwlqxra" path="res://level/pit.tscn" id="15_hb504"]
+[ext_resource type="Script" uid="uid://stl5qw2hebrj" path="res://game/bgm.gd" id="17_dxwpq"]
+[ext_resource type="AudioStream" uid="uid://0mhugj4rrd61" path="res://bgm/into-the-unknown.ogg" id="17_u8s88"]
+[ext_resource type="AudioStream" uid="uid://ci674f5k3jsog" path="res://bgm/scared-of-shadows.ogg" id="18_dxwpq"]
+[ext_resource type="AudioStream" uid="uid://d4he3pg6a6sw4" path="res://bgm/the-shadow-beat.ogg" id="19_mhvfb"]
+[ext_resource type="AudioStream" uid="uid://cpojcmiljh7c3" path="res://bgm/overcome-the-challenge.ogg" id="20_5e03w"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_u5opy")
@@ -79,3 +84,22 @@ unique_name_in_owner = true
 
 [node name="Journal" parent="CanvasLayer" instance=ExtResource("7_y36n6")]
 unique_name_in_owner = true
+
+[node name="BGM" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("17_dxwpq")
+
+[node name="BGM1Player" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("17_u8s88")
+
+[node name="BGM2Player" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("18_dxwpq")
+bus = &"music"
+
+[node name="BGM3Player" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("19_mhvfb")
+bus = &"music"
+
+[node name="BGM4Player" type="AudioStreamPlayer" parent="BGM"]
+stream = ExtResource("20_5e03w")
+bus = &"music"

@@ -4,6 +4,10 @@ func _ready() -> void:
 	set_level("Hangar", "")
 	add_to_group("game")
 	#ProjectSettings.set_setting("physics/2d/default_gravity", 490)
+	$BGM.play_track(1)
+	#get_tree().create_timer(20.0).timeout.connect($BGM.play_track.bind(2))
+	#get_tree().create_timer(40.0).timeout.connect($BGM.play_track.bind(3))
+	#get_tree().create_timer(65.0).timeout.connect($BGM.play_track.bind(4))
 
 func set_level(level_name, entrance):
 	var level = get_node(level_name)
