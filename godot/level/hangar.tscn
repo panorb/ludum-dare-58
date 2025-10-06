@@ -23,7 +23,7 @@ size = Vector2(1023, 318)
 script = ExtResource("1_s7anl")
 
 [node name="BackgroundTileMapLayer" type="TileMapLayer" parent="."]
-position = Vector2(0, 64)
+position = Vector2(3, 63)
 tile_map_data = PackedByteArray("AAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAACAAAAAAACAAAAAAACAAAAAAA=")
 tile_set = ExtResource("2_5n5hi")
 
@@ -69,9 +69,6 @@ position = Vector2(-93, 320)
 [node name="StartDialog" parent="." instance=ExtResource("11_u56me")]
 position = Vector2(69, 320)
 
-[node name="Locker" parent="." instance=ExtResource("12_u56me")]
-position = Vector2(436, 226)
-
 [node name="Locker2" parent="." instance=ExtResource("13_elaeb")]
 position = Vector2(420, 226)
 
@@ -80,6 +77,9 @@ position = Vector2(452, 226)
 
 [node name="LockerOpen" parent="." instance=ExtResource("14_mpl3i")]
 position = Vector2(468, 226)
+
+[node name="Locker" parent="." instance=ExtResource("12_u56me")]
+position = Vector2(436, 226)
 
 [node name="DeskPC" parent="." instance=ExtResource("15_4kuyg")]
 position = Vector2(530, 233)

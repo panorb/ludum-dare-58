@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://drk4o1p6qdxmk" path="res://interactable/ship.png" id="3_ysj4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wu3rf"]
-size = Vector2(70, 178)
+size = Vector2(70, 40)
 
 [node name="Ship" instance=ExtResource("1_ysj4k")]
 collision_mask = 512
@@ -21,7 +21,7 @@ z_index = 3
 position = Vector2(-66, -91)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
-position = Vector2(1, -67)
+position = Vector2(-68, -67)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_wu3rf")
 
