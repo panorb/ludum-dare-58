@@ -48,9 +48,11 @@ func _on_timer_timeout():
 
 func open_journal():
 	%JournalPanel.visible = true
+	%Player.freeze()
 
 func close_journal():
 	%JournalPanel.visible = false
+	%Player.unfreeze()
 	for entry in unread:
 		entry.mark_read()
 	unread.clear()
