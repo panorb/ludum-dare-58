@@ -1,5 +1,6 @@
 extends Control
 
+# "full_battery" # to check end screen
 var items = []
 var display_items = []
 var item_scene = preload("res://game/inventory_item.tscn")
