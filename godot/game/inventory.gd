@@ -2,7 +2,7 @@ extends Control
 
 var items = []
 var display_items = []
-var item_scene = preload("res://game/InventoryItem.tscn")
+var item_scene = preload("res://game/inventory_item.tscn")
 
 func _ready():
 	var item_display = $Items
