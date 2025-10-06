@@ -1,0 +1,12 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "What happens if I press it again?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "The gravity is back to normal."
+	}
+]

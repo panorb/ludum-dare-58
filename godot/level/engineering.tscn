@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://qtovlymu5q0f"]
+[gd_scene load_steps=7 format=4 uid="uid://qtovlymu5q0f"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_iqrbt"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_0fqwl"]
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="2_3pcrg"]
+[ext_resource type="PackedScene" uid="uid://b7apn7awg0kpu" path="res://interactable/gravity_generator/gravity_button.tscn" id="5_qm4mq"]
 [ext_resource type="PackedScene" uid="uid://c6o2wukn2og6b" path="res://interactable/auto_door_left.tscn" id="6_7doqf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
@@ -21,6 +22,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAIAAAABAAAAAAABAAIAAAAHAAIAAAAGAAE
 tile_set = ExtResource("2_3pcrg")
 
 [node name="CameraBounds" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraBounds"]
 position = Vector2(385.5, 305.5)
@@ -30,3 +32,6 @@ shape = SubResource("RectangleShape2D_qohg2")
 position = Vector2(817, 128)
 target = "Hub2"
 entrance = "Hub2EngDoor"
+
+[node name="NumberButton" parent="." instance=ExtResource("5_qm4mq")]
+position = Vector2(237, 542)

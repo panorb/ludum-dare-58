@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7apn7awg0kpu"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_cmfjy"]
+[ext_resource type="Script" uid="uid://bnltm6cp5yh87" path="res://interactable/gravity_generator/gravity_button.gd" id="2_s0hto"]
+[ext_resource type="SpriteFrames" uid="uid://ecdcfhb2887g" path="res://interactable/gravity_generator/button.aseprite" id="3_08ipp"]
+[ext_resource type="AudioStream" uid="uid://cm3bgpe60wsyx" path="res://interactable/gravity_generator/button_press.wav" id="6_5d3ng"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qjs28"]
+radius = 24.0
+
+[node name="NumberButton" instance=ExtResource("1_cmfjy")]
+script = ExtResource("2_s0hto")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_qjs28")
+
+[node name="ButtonSprite" type="AnimatedSprite2D" parent="." index="2"]
+sprite_frames = ExtResource("3_08ipp")
+animation = &"relaxed"
+frame_progress = 0.35142338
+
+[node name="ButtonPressSound" type="AudioStreamPlayer2D" parent="." index="3"]
+stream = ExtResource("6_5d3ng")
+volume_db = -3.0
+max_distance = 180.0
+attenuation = 0.5
+bus = &"effects"
