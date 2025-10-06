@@ -1,5 +1,7 @@
 extends Node2D
 
+var loaded_once = false
+
 func _ready() -> void:
 	set_level("Hangar", "")
 	add_to_group("game")
@@ -16,6 +18,11 @@ func set_level(level_name, entrance):
 	print(level_cam_bounds)
 	level_cam_bounds.position += level.position
 	print(level_cam_bounds)
+	if not loaded_once:
+		loaded_once = true
+	else:
+		TransitionScreen.transition()
+		await TransitionScreen.on_transition_finished
 	$Player.set_camera_limits(level_cam_bounds)
 	if entrance:
 		var entry_point = level.get_node(entrance).position + level.position
