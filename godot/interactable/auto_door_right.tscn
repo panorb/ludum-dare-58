@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyamilqua07qd"]
 
-[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_vfvxm"]
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/interactable.tscn" id="1_vfvxm"]
 [ext_resource type="Script" uid="uid://541py63ioifg" path="res://interactable/auto_door.gd" id="2_icgse"]
 [ext_resource type="Texture2D" uid="uid://b787jp83poyix" path="res://interactable/wrench.png" id="3_ty8ly"]
 
