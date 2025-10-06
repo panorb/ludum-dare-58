@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cduq0762l8qtd"]
+[gd_scene load_steps=8 format=3 uid="uid://cduq0762l8qtd"]
 
 [ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/interactable.tscn" id="1_jteae"]
 [ext_resource type="Script" uid="uid://c3ske53xxf22x" path="res://interactable/number_button/number_button.gd" id="2_iapa3"]
 [ext_resource type="SpriteFrames" uid="uid://b2vu6iaytbab6" path="res://interactable/number_button/button.aseprite" id="2_oo26l"]
 [ext_resource type="SpriteFrames" uid="uid://cvwsetokqklp1" path="res://interactable/number_button/eight_segment_display.aseprite" id="3_qjs28"]
+[ext_resource type="AudioStream" uid="uid://dtjr8fnrvkfkh" path="res://interactable/number_button/number_change.wav" id="5_tmn40"]
+[ext_resource type="AudioStream" uid="uid://c0kdilisgciv0" path="res://interactable/number_button/button_press.wav" id="6_ut7dh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qjs28"]
 radius = 24.0
@@ -23,3 +25,15 @@ position = Vector2(0, -51)
 sprite_frames = ExtResource("3_qjs28")
 animation = &"none"
 autoplay = "none"
+
+[node name="NumberChangeSound" type="AudioStreamPlayer2D" parent="." index="4"]
+position = Vector2(0, -51)
+stream = ExtResource("5_tmn40")
+max_distance = 180.0
+bus = &"effects"
+
+[node name="ButtonPressSound" type="AudioStreamPlayer2D" parent="." index="5"]
+stream = ExtResource("6_ut7dh")
+volume_db = -3.0
+max_distance = 180.0
+bus = &"effects"

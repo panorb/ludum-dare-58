@@ -8,11 +8,13 @@ func on_trigger():
 	current_num += 1
 	current_num = current_num % 10
 	
+	$ButtonPressSound.play()
 	$ButtonSprite.play("pressed")
 	await get_tree().create_timer(0.15).timeout
 	$ButtonSprite.play("relaxed")
-	await get_tree().create_timer(0.025).timeout
+	await get_tree().create_timer(0.1).timeout
 	$EightSegmentDisplaySprite.play(str(current_num))
+	$NumberChangeSound.play()
 	# activate()
 	# WARNING: Ugly and buggy to do it this way
 	$ButtonPromptSprite.visible = true
