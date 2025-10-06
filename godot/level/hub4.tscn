@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://djc8tq4vsb7l5" path="res://interactable/door_into/door_into.tscn" id="5_m400m"]
 [ext_resource type="PackedScene" uid="uid://drjtqmsp1anxe" path="res://interactable/security_door_cable.tscn" id="6_o10oi"]
 [ext_resource type="PackedScene" uid="uid://cf3j4l7754kvt" path="res://interactable/generic_dialog_trigger.tscn" id="7_h2v33"]
+[ext_resource type="Texture2D" uid="uid://dpibxor8q6b0v" path="res://player/light_cone.png" id="9_tlcse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(542, 289)
@@ -41,8 +42,8 @@ position = Vector2(1, -32)
 position = Vector2(-272, 175.5)
 shape = SubResource("RectangleShape2D_qohg2")
 
-[node name="WireCutter" parent="CameraBounds" instance=ExtResource("5_034og")]
-position = Vector2(-428, 224)
+[node name="WireCutter" parent="." instance=ExtResource("5_034og")]
+position = Vector2(-427, 192)
 
 [node name="Hub34Door" parent="." instance=ExtResource("5_m400m")]
 position = Vector2(-468, 192)
@@ -64,3 +65,11 @@ dialogs = Array[String](["broken_card_reader"])
 [node name="HangarDecalSoot2" type="Sprite2D" parent="."]
 position = Vector2(-187, 160.5)
 texture = ExtResource("3_034og")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-368.00003, 127.00003)
+rotation = 2.33176
+scale = Vector2(0.31230867, 0.07476108)
+color = Color(0.99215686, 0.3529412, 0.3137255, 1)
+energy = 0.7
+texture = ExtResource("9_tlcse")

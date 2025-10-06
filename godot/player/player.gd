@@ -49,6 +49,7 @@ func play_animation(anim_name: String, emit_signal: bool):
 
 var time_since_last_step = 0.0
 var last_played_footstep_node : AudioStreamPlayer = null
+var current_jump_num = 3
 
 func get_random_footstep_sound_player() -> AudioStreamPlayer:
 	return $Footsteps.get_child(randi_range(0, $Footsteps.get_child_count() - 1))
@@ -63,6 +64,9 @@ func _process(delta: float) -> void:
 			horizontal_velocity += 200
 		if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = -385
+			current_jump_num += 1
+			current_jump_num %= $Jumps.get_child_count()
+			$Jumps.get_child(current_jump_num).play()
 	
 	if abs(velocity.y) > 2:
 		$AnimatedSprite2D.play("jump")

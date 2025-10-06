@@ -1,16 +1,47 @@
 class_name Dialog
 extends Control
 
+# edge case for center text as a type
+class VoidSpeaker extends Node2D:
+	pass
+
+func calc_center_based_upon_length_of_text(viewport_size: Vector2, bbox: Vector2) -> Vector2:
+		# returns a position that centers the textbox so that it appears to be in the center
+		# of the screen both vertically and horizontally
+		# bbox: text bbox
+		# viewport size(original resolution): Camera
+		var pos: Vector2 = Vector2(
+			viewport_size.x - bbox.x ,
+			viewport_size.y - bbox.y
+		)
+		return pos / 2.0 # / 2.0 so we get the middle of the viewport + bbox
+
+func get_viewport_size() -> Vector2:
+	var camera = get_tree().get_first_node_in_group("camera")
+	return camera.get_viewport_rect().size
+	
+# class variable so we don't realloc the speaker again and again
+
+
 @export var speech_bubble_scene : PackedScene = preload("res://cutscene/speech_bubble.tscn")
 var current_speaker_node : Node2D
 
 var current_speech_bubble_node : SpeechBubble
 
+
 func display_bubble(text: String, speaker: String):
 	# TODO: Handle speaker
 	var speaker_candidates = get_tree().get_nodes_in_group(speaker)
-	assert(len(speaker_candidates) == 1)
-	current_speaker_node = speaker_candidates[0]
+	print(speaker_candidates)
+	match speaker:
+		"speaker_void": # scene speaker
+			current_speaker_node = VoidSpeaker.new()
+		"speaker_player":
+			assert(len(speaker_candidates) == 1)
+			current_speaker_node = speaker_candidates[0]
+		_:
+			print("unrecognized speaker input {0}".format([speaker]))
+	print(current_speaker_node.global_position)
 	
 	var old_speech_bubble_node = current_speech_bubble_node
 	current_speech_bubble_node = speech_bubble_scene.instantiate()
@@ -51,13 +82,25 @@ func _process(delta: float) -> void:
 			transform.origin.y / transform.y.y
 		)
 		
-		# we want to clip the dialog box later so it isn't out of the viewport
+		var camera_viewport_size: Vector2 = camera.get_viewport_rect().size
+		# we want to clip the ddaialog box later so it isn't out of the viewport
 		var bbox = Vector2(current_speech_bubble_node.size)
-		var pos = current_speaker_node.global_position + scaled_origin
+		# origin position of textbox
+		if current_speaker_node is VoidSpeaker:
+			current_speaker_node.global_position = calc_center_based_upon_length_of_text(camera_viewport_size, bbox)
+			# don't clip textboxes as we know that they shouldn't clip
+			current_speech_bubble_node.position = current_speaker_node.global_position
+			current_speech_bubble_node.hide_box()
+			print("pos: {0}" # scaled: {1}"-+
+			.format([current_speech_bubble_node.position]))
+			return
+
+		var pos: Vector2 = current_speaker_node.global_position + scaled_origin
+		
 		
 		# clipping: if the bbox of the speechbuble might be out of the window
 		#   move it back in
-		var camera_viewport_size = camera.get_viewport_rect().size
+		
 		if (pos.x + bbox.x ) >= camera_viewport_size.x:
 			pos.x -= bbox.x
 		

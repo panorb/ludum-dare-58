@@ -1,11 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://ddbej7fv2tj4c"]
+[gd_scene load_steps=7 format=3 uid="uid://ddbej7fv2tj4c"]
 
-[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/Interactable.tscn" id="1_52p6h"]
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/interactable.tscn" id="1_52p6h"]
 [ext_resource type="Script" uid="uid://ds4un60dqjcl0" path="res://interactable/wirecutter.gd" id="2_52p6h"]
 [ext_resource type="SpriteFrames" uid="uid://bfxkbyu7dvcca" path="res://interactable/wirecutter.aseprite" id="3_52p6h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_x5w8o"]
 radius = 6.0827627
+
+[sub_resource type="Gradient" id="Gradient_tlcse"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_52p6h"]
+gradient = SubResource("Gradient_tlcse")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
 
 [node name="WireCutter" groups=["wirecutter"] instance=ExtResource("1_52p6h")]
 collision_mask = 512
@@ -23,3 +32,9 @@ sprite_frames = ExtResource("3_52p6h")
 [node name="ButtonPromptSprite" parent="." index="2"]
 visible = true
 position = Vector2(0, -14)
+
+[node name="PointLight2D2" type="PointLight2D" parent="." index="3"]
+scale = Vector2(0.35, 0.35)
+color = Color(0.99215686, 0.3529412, 0.3137255, 1)
+energy = 0.2
+texture = SubResource("GradientTexture2D_52p6h")
