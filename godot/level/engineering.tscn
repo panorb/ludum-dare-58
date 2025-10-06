@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://boodvnwhfx80c" path="res://level/engineering/engineering_decal_1.png" id="9_7doqf"]
 [ext_resource type="Texture2D" uid="uid://f0cvh0c8ynl" path="res://level/engineering/engineering_decal_2.png" id="10_rvhux"]
 [ext_resource type="Texture2D" uid="uid://dufndtmo8da8k" path="res://level/engineering/engineering_decal_3.png" id="11_tgwsm"]
+[ext_resource type="PackedScene" uid="uid://4ycpibql3uew" path="res://level/decals/GravGen.tscn" id="9_ts8oa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(891, 611)
@@ -39,7 +40,7 @@ position = Vector2(817, 128)
 target = "Hub2"
 entrance = "Hub2EngDoor"
 
-[node name="NumberButton" parent="." instance=ExtResource("5_qm4mq")]
+[node name="GravityButton" parent="." instance=ExtResource("5_qm4mq")]
 position = Vector2(237, 542)
 
 [node name="GenericDialogTrigger" parent="." instance=ExtResource("6_iqrbt")]
@@ -82,3 +83,7 @@ texture = ExtResource("9_7doqf")
 position = Vector2(387, 71)
 scale = Vector2(-1, 1)
 texture = ExtResource("10_rvhux")
+
+[node name="GravGen" parent="." instance=ExtResource("9_ts8oa")]
+unique_name_in_owner = true
+position = Vector2(308, 496)

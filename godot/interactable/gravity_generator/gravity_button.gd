@@ -16,8 +16,10 @@ func on_trigger():
 	is_low_gravity = not is_low_gravity
 	if is_low_gravity:
 		ProjectSettings.set_setting("physics/2d/default_gravity", low_gravity)
+		%GravGen.slow()
 	else:
 		ProjectSettings.set_setting("physics/2d/default_gravity", high_gravity)
+		%GravGen.fast()
 	# TODO dialog what did this do?
 	# only first time, maybe second time
 	if times_pressed == 0:

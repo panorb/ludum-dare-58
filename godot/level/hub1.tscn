@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bdl1mevsuxsfb"]
+[gd_scene load_steps=17 format=4 uid="uid://bdl1mevsuxsfb"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_1dmqt"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_kq08c"]
@@ -13,7 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://5yb60o2rqeis" path="res://interactable/security_door_id1.tscn" id="11_uxpqw"]
 [ext_resource type="PackedScene" uid="uid://djsgy0txjhq84" path="res://interactable/generic_auto_dialog.tscn" id="12_vfpb5"]
 [ext_resource type="PackedScene" uid="uid://cf3j4l7754kvt" path="res://interactable/generic_dialog_trigger.tscn" id="13_djv7d"]
-[ext_resource type="Texture2D" uid="uid://ce54dweup63w3" path="res://level/decal_blood.png" id="14_igca0"]
+[ext_resource type="PackedScene" uid="uid://ck2kyd6ma2bwg" path="res://level/decals/Box.tscn" id="14_igca0"]
+[ext_resource type="PackedScene" uid="uid://cww72dahfk68o" path="res://level/decals/Blood.tscn" id="15_f6nwc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(542, 416)
@@ -72,18 +73,20 @@ position = Vector2(118, 384)
 dialogs = Array[String](["blood_on_the_wall_spotted"])
 
 [node name="GenericDialogTrigger2" parent="." instance=ExtResource("13_djv7d")]
-position = Vector2(61, 351)
+position = Vector2(72, 345)
 dialogs = Array[String](["blood_on_the_wall"])
 
 [node name="HangarDecalSoot3" type="Sprite2D" parent="."]
 position = Vector2(62, 325)
 texture = ExtResource("6_igca0")
 
-[node name="DecalBlood" type="Sprite2D" parent="."]
-position = Vector2(62, 359)
-texture = ExtResource("14_igca0")
-
 [node name="Hub12Door" parent="." instance=ExtResource("10_kq08c")]
 position = Vector2(16, 384)
 target = "Hub2"
 entrance = "Hub12Door"
+
+[node name="Box" parent="." instance=ExtResource("14_igca0")]
+position = Vector2(176, 368)
+
+[node name="Blood" parent="." instance=ExtResource("15_f6nwc")]
+position = Vector2(74, 352)

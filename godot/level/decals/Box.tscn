@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck2kyd6ma2bwg"]
+
+[ext_resource type="SpriteFrames" uid="uid://bq5vytvx1ahwo" path="res://level/decals/decal_box.aseprite" id="1_pcsn2"]
+
+[node name="Box" type="Node2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_pcsn2")

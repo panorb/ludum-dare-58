@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://4ycpibql3uew"]
+
+[ext_resource type="SpriteFrames" uid="uid://dms2sf47h7k0i" path="res://level/decals/gravity_generator.aseprite" id="1_03kqt"]
+[ext_resource type="Script" uid="uid://b480cit4ircft" path="res://level/decals/grav_gen.gd" id="1_e33j5"]
+
+[node name="GravGen" type="Node2D"]
+script = ExtResource("1_e33j5")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_03kqt")
+animation = &"fast"

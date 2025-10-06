@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dx0kwoo7mpv8i"]
+
+[ext_resource type="SpriteFrames" uid="uid://dmmr7n3ry8ct3" path="res://level/decals/locker.aseprite" id="1_7md8r"]
+
+[node name="LockerOpen" type="Node2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_7md8r")
+animation = &"open_full"
