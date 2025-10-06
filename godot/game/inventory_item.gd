@@ -2,6 +2,7 @@ extends Control
 
 @export var item_icons : Dictionary = {
 	"wrench": preload("res://interactable/wrench.png"),
+	"id_card": preload("res://ui/inventory_items/id_card.png")
 }
 
 func set_item(item):
