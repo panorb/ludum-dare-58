@@ -1,0 +1,21 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Looks like some medical supplies."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "But there's hardly any left."
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Did they not bother stocking it, or did they have to use all these bandages?"
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hub3_medpack"
+	}
+]

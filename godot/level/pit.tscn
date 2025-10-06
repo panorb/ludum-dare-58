@@ -59,3 +59,4 @@ texture = ExtResource("7_nwubf")
 
 [node name="Locker" parent="." instance=ExtResource("8_fdpu0")]
 position = Vector2(-361, 482)
+dialog = "pit_locker"

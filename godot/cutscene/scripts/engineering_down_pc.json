@@ -1,0 +1,31 @@
+[
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "This seems like an important machine..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Crazy it's left running."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Couldn't hurt to have a look..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "...I feel sick."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "eng_pc"
+	}
+]

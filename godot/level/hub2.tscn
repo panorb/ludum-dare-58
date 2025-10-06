@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bk4x5hyi8fryq"]
+[gd_scene load_steps=17 format=4 uid="uid://bk4x5hyi8fryq"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_ca2hu"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_07cog"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dbjyobn4r3yrr" path="res://level/decals/LockerOpenEmpty.tscn" id="12_ikx2t"]
 [ext_resource type="PackedScene" uid="uid://c70qvwxm8ubpa" path="res://interactable/locker/locker.tscn" id="13_umpop"]
 [ext_resource type="PackedScene" uid="uid://bvsoprj0obnjn" path="res://level/decals/DeskBooks.tscn" id="14_ikx2t"]
+[ext_resource type="PackedScene" uid="uid://cf3j4l7754kvt" path="res://interactable/generic_dialog_trigger.tscn" id="15_umpop"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(767, 381)
@@ -84,3 +85,11 @@ position = Vector2(-186, 130)
 
 [node name="DeskBooks" parent="." instance=ExtResource("14_ikx2t")]
 position = Vector2(-71, 138)
+
+[node name="GenericDialogTrigger" parent="." instance=ExtResource("15_umpop")]
+position = Vector2(-71, 138)
+dialogs = Array[String](["hub2_down_desk_notes"])
+
+[node name="GenericDialogTrigger2" parent="." instance=ExtResource("15_umpop")]
+position = Vector2(-447, 265)
+dialogs = Array[String](["hub2_down_desk_pc"])

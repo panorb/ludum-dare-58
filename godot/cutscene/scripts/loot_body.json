@@ -9,10 +9,10 @@
 		"speaker": "player",
 		"text": "That's... A c- corpse..."
 	},
-    {
-        "type": "play_bgm",
-        "track": 3
-    },
+	{
+		"type": "play_bgm",
+		"track": 3
+	},
 	{
 		"type": "speech",
 		"speaker": "player",
@@ -85,7 +85,31 @@
 	{
 		"type": "speech",
 		"speaker": "player",
-		"text": "Sleep tight, buddy..."
+		"text": "There's a note attached..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "..."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Why would he want to do this?"
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Well, doesn't matter anymore."
+	},
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Sleep tight, Robert."
+	},
+	{
+		"type": "unlock_journal_entry",
+		"entry": "pit_corpse"
 	},
 	{
 		"type": "player_animation",

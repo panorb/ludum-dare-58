@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c4bwtwtturkci"]
+[gd_scene load_steps=20 format=4 uid="uid://c4bwtwtturkci"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_s7anl"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_5n5hi"]
@@ -15,7 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://c8qpouc01sroc" path="res://level/decals/Locker.tscn" id="13_elaeb"]
 [ext_resource type="PackedScene" uid="uid://dbjyobn4r3yrr" path="res://level/decals/LockerOpenEmpty.tscn" id="14_mpl3i"]
 [ext_resource type="PackedScene" uid="uid://dpekrbes3hqv5" path="res://level/decals/DeskPC.tscn" id="15_4kuyg"]
-[ext_resource type="Texture2D" uid="uid://b851ibios02bt" path="res://ui/title.png" id="16_mpl3i"]
+[ext_resource type="PackedScene" uid="uid://cf3j4l7754kvt" path="res://interactable/generic_dialog_trigger.tscn" id="16_mpl3i"]
+[ext_resource type="Texture2D" uid="uid://b851ibios02bt" path="res://ui/title.png" id="16_rtdv1"]
+[ext_resource type="Texture2D" uid="uid://b2nuneje5u50u" path="res://level/decals/sticky_note.png" id="17_4kuyg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(1023, 318)
@@ -69,7 +71,7 @@ position = Vector2(-93, 320)
 
 [node name="StartDialog" parent="." instance=ExtResource("11_u56me")]
 position = Vector2(69, 320)
-dialogs = Array[String](["hide_logo"])
+dialogs = Array[String](["hello"])
 
 [node name="Locker2" parent="." instance=ExtResource("13_elaeb")]
 position = Vector2(420, 226)
@@ -82,10 +84,27 @@ position = Vector2(468, 226)
 
 [node name="Locker" parent="." instance=ExtResource("12_u56me")]
 position = Vector2(436, 226)
+dialog = "hangar_locker"
 
 [node name="DeskPC" parent="." instance=ExtResource("15_4kuyg")]
 position = Vector2(530, 233)
 
 [node name="Title" type="Sprite2D" parent="." groups=["logo"]]
-position = Vector2(281, 232)
-texture = ExtResource("16_mpl3i")
+position = Vector2(260, 232)
+texture = ExtResource("16_rtdv1")
+
+[node name="GenericDialogTrigger" parent="." instance=ExtResource("16_mpl3i")]
+position = Vector2(528, 233)
+dialogs = Array[String](["hangar_pc"])
+
+[node name="GenericDialogTrigger2" parent="." instance=ExtResource("16_mpl3i")]
+position = Vector2(633, 194)
+dialogs = Array[String](["hangar_sign"])
+
+[node name="GenericDialogTrigger3" parent="." instance=ExtResource("16_mpl3i")]
+position = Vector2(702, 196)
+dialogs = Array[String](["hangar_sticky"])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(702, 196)
+texture = ExtResource("17_4kuyg")

@@ -1,8 +1,23 @@
 extends Control
 
 @export var entries = {
-	"got_wrench": "I found left tools. It seems whoever abandoned the station was in a hurry - or simply didn't tidy up...",
-	"opened_meaningless_lock": "The amazing wrench opened the lock. It's open now, and that's the end of the story. Opening the lock has achieved nothing. Life is meaningless, just like this lock...",
+	"hangar_locker": "Found several repair manuals for various ship systems. It must have been severaly damaged by something",
+	"hangar_pc_log": "Seems the pilot was asleep and the ship got hit by an asteroid",
+	"hangar_sign": "Comprehensive shuttle safety warnings suggest the ship had a shuttle equipped",
+	"hangar_sticky": "Found an access code in the hangar: 287",
+	"hub1_desk": "The ships a colony ship - it should carry hundreds of people in cryosleep. Why are there no life-signs?",
+	"hub1_log": "Some guy named Robert attacked the pilot Edgar.",
+	"hub1_locker": "The gravity generator has been overriden and can only be changed manually in engineering",
+	"hub3_pc": "The ship's doctor Sarah wants to leave the ships with Edgar and Adam, while Robert works on the antenna.",
+	"hub3_desk": "The ship has an AI system called SAI, that's behaving oddly since the accident.",
+	"hub3_medpack": "The medical supplies seem to have been used quite a lot, they're almost empty.",
+	"hub2_desk": "Apparently Edgar has lied to Sarah about havin calculated the trajectory of the drifting ship",
+	"hub2_pc": "Adam removed the restraints of the Ship AI just after the crash.",
+	"eng_desk": "The pilot told everyone that the sensors never picked up that asteroid",
+	"eng_pc": "The ships passengers have been feed to the bioreactor to keep the AI system running.",
+	"pit_locker": "The ships antennas are irrepairably broken, and without them, the location of th ship can never be known.",
+	"pit_corpse": "Robert went to disable the bioreactor - seems he never made it",
+	"goal_pc": "All passenges have been converted to energy - they are all dead..."
 }
 
 var journal_entry_scene = preload("res://game/journal_entry.tscn")
@@ -28,6 +43,8 @@ func _ready():
 func unlock_entry(entry):
 	if entry not in entries.keys():
 		print("ERROR: unknown journal entry key "+entry)
+		return
+	if entry in unlocked:
 		return
 	unlocked.append(entry)
 	$ToastPanel.visible = true

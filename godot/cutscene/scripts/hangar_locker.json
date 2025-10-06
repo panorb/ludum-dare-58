@@ -1,0 +1,50 @@
+[
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Hm..."
+    },
+    {
+        "type": "wait",
+        "time": 0.25
+    },
+    {
+        "type": "signal",
+        "value": "open_full"
+    },
+    {
+        "type": "wait",
+        "time": 0.3
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "What a mess!"
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Who needs all these repair manuals?"
+    },
+	{
+		"type": "speech",
+		"speaker": "player",
+		"text": "Well, I guess if things are really broken..."
+    },
+    {
+        "type": "signal",
+        "value": "open_empty"
+    },
+    {
+        "type": "wait",
+        "time": 0.5
+    },
+    {
+        "type": "signal",
+        "value": "closed_empty"
+    },
+	{
+		"type": "unlock_journal_entry",
+		"entry": "hangar_locker"
+	}
+]

@@ -64,3 +64,15 @@ position = Vector2(-34, 171)
 [node name="FirstAid" type="Sprite2D" parent="."]
 position = Vector2(30, 160)
 texture = ExtResource("11_lwy0b")
+
+[node name="GenericDialogTrigger2" parent="." instance=ExtResource("7_q4b2k")]
+position = Vector2(-122, 232)
+dialogs = Array[String](["hub3_pc"])
+
+[node name="GenericDialogTrigger4" parent="." instance=ExtResource("7_q4b2k")]
+position = Vector2(31, 161)
+dialogs = Array[String](["hub3_medpack"])
+
+[node name="GenericDialogTrigger3" parent="." instance=ExtResource("7_q4b2k")]
+position = Vector2(-37, 170)
+dialogs = Array[String](["hub3_desk"])

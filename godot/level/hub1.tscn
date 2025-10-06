@@ -116,6 +116,15 @@ texture = ExtResource("19_lqi7u")
 
 [node name="Locker2" parent="." instance=ExtResource("20_bic5i")]
 position = Vector2(223, 354)
+dialog = "hub1_locker"
 
 [node name="Locker" parent="." instance=ExtResource("22_lqi7u")]
 position = Vector2(239, 354)
+
+[node name="GenericDialogTrigger3" parent="." instance=ExtResource("13_djv7d")]
+position = Vector2(-139, 169)
+dialogs = Array[String](["hub1_desk"])
+
+[node name="GenericDialogTrigger4" parent="." instance=ExtResource("13_djv7d")]
+position = Vector2(-46, 201)
+dialogs = Array[String](["hub1_pc"])
