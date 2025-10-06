@@ -1,9 +1,10 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://7ap73ky2c1wr"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://7ap73ky2c1wr"]
 
-[ext_resource type="Texture2D" uid="uid://c28dqv18brtdo" path="res://level/hangar_tiles.png" id="1_kvch2"]
+[ext_resource type="Texture2D" uid="uid://c28dqv18brtdo" path="res://level/hangar/hangar_tiles.png" id="1_3mcvb"]
+[ext_resource type="Texture2D" uid="uid://dmvyyvxlhjpgt" path="res://level/engineering/engineering_tile.png" id="2_r8chw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3mcvb"]
-texture = ExtResource("1_kvch2")
+texture = ExtResource("1_3mcvb")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 1:0/0 = 0
@@ -15,6 +16,12 @@ texture_region_size = Vector2i(256, 256)
 1:2/0 = 0
 2:2/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qg5yc"]
+texture = ExtResource("2_r8chw")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(256, 256)
 sources/0 = SubResource("TileSetAtlasSource_3mcvb")
+sources/1 = SubResource("TileSetAtlasSource_qg5yc")

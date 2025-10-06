@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c28dqv18brtdo"
-path="res://.godot/imported/hangar_tiles.png-53b4487fc9f6560f95d8c59fad6fc002.ctex"
+uid="uid://dmvyyvxlhjpgt"
+path="res://.godot/imported/engineering_tile.png-083baa75746f07b6a1b13826e491a487.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/hangar_tiles.png"
-dest_files=["res://.godot/imported/hangar_tiles.png-53b4487fc9f6560f95d8c59fad6fc002.ctex"]
+source_file="res://level/engineering/engineering_tile.png"
+dest_files=["res://.godot/imported/engineering_tile.png-083baa75746f07b6a1b13826e491a487.ctex"]
 
 [params]
 

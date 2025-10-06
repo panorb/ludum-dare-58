@@ -1,0 +1,19 @@
+[
+    {
+        "type": "signal",
+        "value": "open_empty"
+    },
+    {
+        "type": "wait",
+        "time": 0.6
+    },
+    {
+		"type": "speech",
+		"speaker": "player",
+		"text": "Empty."
+	},
+    {
+        "type": "signal",
+        "value": "closed_empty"
+    }
+]
