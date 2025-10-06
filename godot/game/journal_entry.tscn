@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c6s6dqwi10nnk" path="res://game/journal_entry.gd" id="1_js441"]
 [ext_resource type="Texture2D" uid="uid://cip4jvqeig046" path="res://cutscene/bubble_9patch.png" id="1_x6cvu"]
 [ext_resource type="Texture2D" uid="uid://xxdwifaodf4m" path="res://game/unknown_entry_9patch.png" id="3_2umf5"]
-[ext_resource type="Texture2D" uid="uid://chqut2y2ka2lg" path="res://interactable/button-prompt.png" id="3_eia6w"]
+[ext_resource type="Texture2D" uid="uid://chqut2y2ka2lg" path="res://interactable/button_prompt.png" id="3_eia6w"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_eia6w"]
 
