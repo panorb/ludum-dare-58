@@ -2,13 +2,14 @@ class_name Interactable
 extends Area2D
 
 @export var active = true
+var cutscene_conductor : CutsceneConductor
 
 func _ready() -> void:
 	$ButtonPromptSprite.visible = false
 	
 	await get_tree().process_frame
 	
-	var cutscene_conductor: CutsceneConductor = get_tree().get_first_node_in_group("cutscene_conductor")
+	cutscene_conductor = get_tree().get_first_node_in_group("cutscene_conductor")
 	cutscene_conductor.cutscene_signal.connect(on_cutscene_signal)
 
 # activates interactable so that it becomes usable again

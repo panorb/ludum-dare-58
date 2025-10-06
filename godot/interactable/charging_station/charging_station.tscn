@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://clfj13dv2fngx"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/interactable.tscn" id="1_lv6rl"]
+[ext_resource type="SpriteFrames" uid="uid://dpp2y6nrxr3k6" path="res://interactable/charging_station/charging_station.aseprite" id="2_gqo5f"]
+[ext_resource type="Script" uid="uid://bbxv3osn885qs" path="res://interactable/charging_station/charging_station.gd" id="2_qoenc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lv6rl"]
+size = Vector2(24, 39)
+
+[node name="ChargingStation" instance=ExtResource("1_lv6rl")]
+script = ExtResource("2_qoenc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = ExtResource("2_gqo5f")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_lv6rl")
