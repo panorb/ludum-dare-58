@@ -3,7 +3,7 @@ extends Node2D
 var loaded_once = false
 
 func _ready() -> void:
-	set_level("Engineering", "")
+	set_level("Hangar", "")
 	add_to_group("game")
 	#ProjectSettings.set_setting("physics/2d/default_gravity", 490)
 	$BGM.play_track(1)
