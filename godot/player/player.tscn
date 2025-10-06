@@ -1,13 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqo6h223cwhjb"]
+[gd_scene load_steps=8 format=3 uid="uid://cqo6h223cwhjb"]
 
 [ext_resource type="Script" uid="uid://dt05gb1cuukff" path="res://player/player.gd" id="1_rkbax"]
 [ext_resource type="SpriteFrames" uid="uid://b08ytowrnhk2c" path="res://player/player.aseprite" id="2_rkbax"]
+[ext_resource type="Texture2D" uid="uid://dpibxor8q6b0v" path="res://player/light_cone.png" id="3_g1dw6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oul6g"]
 size = Vector2(20, 62)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
 radius = 19.026299
+
+[sub_resource type="Gradient" id="Gradient_ee6o4"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rkbax"]
+gradient = SubResource("Gradient_ee6o4")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 512
@@ -36,3 +48,16 @@ collision_mask = 2048
 shape = SubResource("CircleShape2D_rkbax")
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["camera"]]
+
+[node name="PointLightGlow" type="PointLight2D" parent="."]
+color = Color(0.50980395, 0.6392157, 0.27058825, 1)
+energy = 0.6
+texture = SubResource("GradientTexture2D_rkbax")
+offset = Vector2(0, -32)
+
+[node name="PointLightSpot" type="PointLight2D" parent="."]
+color = Color(0.50980395, 0.6392157, 0.27058825, 1)
+energy = 2.5
+texture = ExtResource("3_g1dw6")
+offset = Vector2(180, -52)
+texture_scale = 0.7

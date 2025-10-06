@@ -79,3 +79,6 @@ unique_name_in_owner = true
 
 [node name="Journal" parent="CanvasLayer" instance=ExtResource("7_y36n6")]
 unique_name_in_owner = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.078431375, 0.019607844, 0.019607844, 1)
