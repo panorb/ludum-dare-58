@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b787jp83poyix" path="res://interactable/wrench.png" id="3_ty8ly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hsc5r"]
-size = Vector2(2, 62)
+size = Vector2(1, 96)
 
 [node name="AutoDoor" instance=ExtResource("1_vfvxm")]
 collision_mask = 512
@@ -14,7 +14,7 @@ target = "Level1"
 entrance = "Level1Entrance"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-position = Vector2(-14, -31)
+position = Vector2(-13.5, -48)
 shape = SubResource("RectangleShape2D_hsc5r")
 
 [node name="Door" type="Sprite2D" parent="." index="1"]
