@@ -1,0 +1,45 @@
+[
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "Hm..."
+    },
+    {
+        "type": "wait",
+        "time": 0.25
+    },
+    {
+        "type": "signal",
+        "value": "open_full"
+    },
+    {
+        "type": "wait",
+        "time": 0.3
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "..."
+    },
+    {
+        "type": "wait",
+        "time": 0.7
+    },
+    {
+        "type": "speech",
+        "speaker": "player",
+        "text": "...Dont mind if I do..."
+    },
+    {
+        "type": "signal",
+        "value": "open_empty"
+    },
+    {
+        "type": "wait",
+        "time": 0.5
+    },
+    {
+        "type": "signal",
+        "value": "closed_empty"
+    }
+]

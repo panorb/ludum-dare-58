@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://c4bwtwtturkci"]
+[gd_scene load_steps=14 format=4 uid="uid://c4bwtwtturkci"]
 
 [ext_resource type="Script" uid="uid://dfijt0pvburgn" path="res://level/level.gd" id="1_s7anl"]
 [ext_resource type="TileSet" uid="uid://7ap73ky2c1wr" path="res://level/hangar_background_tiles.tres" id="2_5n5hi"]
@@ -11,6 +11,7 @@
 [ext_resource type="TileSet" uid="uid://c1w0l42m75ijk" path="res://level/walls/tileset_walls.tres" id="10_1mkcw"]
 [ext_resource type="PackedScene" uid="uid://h4evw17s8mgm" path="res://interactable/ship.tscn" id="11_5n5hi"]
 [ext_resource type="PackedScene" uid="uid://djsgy0txjhq84" path="res://interactable/generic_auto_dialog.tscn" id="11_u56me"]
+[ext_resource type="PackedScene" uid="uid://c70qvwxm8ubpa" path="res://interactable/locker/locker.tscn" id="12_u56me"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qohg2"]
 size = Vector2(1023, 318)
@@ -64,3 +65,6 @@ position = Vector2(-93, 320)
 
 [node name="StartDialog" parent="." instance=ExtResource("11_u56me")]
 position = Vector2(69, 320)
+
+[node name="Locker" parent="." instance=ExtResource("12_u56me")]
+position = Vector2(378, 290)

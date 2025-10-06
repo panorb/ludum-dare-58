@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c28dqv18brtdo"
-path="res://.godot/imported/hangar_tiles.png-53b4487fc9f6560f95d8c59fad6fc002.ctex"
+uid="uid://clf2l2kppdush"
+path="res://.godot/imported/hub_decal_dirt_1.png-1c2506e7425b1620091744334cf6643e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://level/hangar_tiles.png"
-dest_files=["res://.godot/imported/hangar_tiles.png-53b4487fc9f6560f95d8c59fad6fc002.ctex"]
+source_file="res://level/hub/hub_decal_dirt_1.png"
+dest_files=["res://.godot/imported/hub_decal_dirt_1.png-1c2506e7425b1620091744334cf6643e.ctex"]
 
 [params]
 

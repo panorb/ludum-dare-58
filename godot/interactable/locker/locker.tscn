@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://c70qvwxm8ubpa"]
+
+[ext_resource type="PackedScene" uid="uid://c5g1aqrbs6tsc" path="res://interactable/interactable.tscn" id="1_lxt6l"]
+[ext_resource type="SpriteFrames" uid="uid://c8sswt8b2kngk" path="res://interactable/locker/locker.aseprite" id="2_3bbwa"]
+[ext_resource type="Script" uid="uid://dgbu2pwpmsnys" path="res://interactable/locker/locker.gd" id="2_8jaxu"]
+[ext_resource type="AudioStream" uid="uid://c424arc0uxb0s" path="res://interactable/locker/door_open.wav" id="4_f2t5v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bbwa"]
+size = Vector2(16, 60)
+
+[node name="Locker" instance=ExtResource("1_lxt6l")]
+script = ExtResource("2_8jaxu")
+
+[node name="ButtonPromptSprite" parent="." index="0"]
+visible = true
+position = Vector2(-8, -41)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("2_3bbwa")
+animation = &"closed_full"
+autoplay = "closed_full"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(-8, 0)
+shape = SubResource("RectangleShape2D_3bbwa")
+
+[node name="DoorOpenPlayer" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("4_f2t5v")
+volume_db = 5.0
