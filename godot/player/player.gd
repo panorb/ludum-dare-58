@@ -70,13 +70,17 @@ func _process(delta: float) -> void:
 	
 	if abs(velocity.y) > 2:
 		$AnimatedSprite2D.play("jump")
+		$FootParticles.emitting = false
 	if abs(velocity.y) < 2 and $AnimatedSprite2D.animation == "jump":
 		$AnimatedSprite2D.play("idle")
+		$FootParticles.emitting = false
 	
 	if abs(velocity.x) > 10 and is_on_floor() and $AnimatedSprite2D.animation == "idle":
 		$AnimatedSprite2D.play("running")
+		$FootParticles.emitting = true
 	elif abs(velocity.x) < 10 and is_on_floor() and $AnimatedSprite2D.animation == "running":
 		$AnimatedSprite2D.play("idle")
+		$FootParticles.emitting = false
 	
 	if abs(velocity.x) > 10:
 		if velocity.x < 0:
