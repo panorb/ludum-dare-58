@@ -56,6 +56,14 @@
 		"wait": false
 	},
 	{
+		"type": "signal",
+		"value": "fix_door"
+	},
+	{
+		"type": "wait",
+		"time": 0.4
+	},
+	{
 		"type": "speech",
 		"speaker": "player",
 		"text": "There - now it's no longer stuck in an endless cycle."

@@ -1,5 +1,8 @@
 [
     {
+        "type": "fade_out_bgm"
+    },
+    {
         "type": "speech",
         "speaker": "player",
         "text": "Wait..."
@@ -8,9 +11,6 @@
         "type": "speech",
         "speaker": "player",
         "text": "That is..."
-    },
-    {
-        "type": "fade_out_bgm"
     },
     {
         "type": "play_bgm",

@@ -8,6 +8,7 @@ var frames = [0, 1, 2, 3, 4, 4, 2, 0, 0, 0]
 var is_custom_playing = true
 
 func _ready():
+	super._ready()
 	$DoorSprite.play("opening")
 	$DoorSprite.frame = 0
 
@@ -29,14 +30,18 @@ func on_trigger():
 		get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("open_security_door3_already_open")
 		return
 	get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("open_security_door3")
-	get_tree().get_first_node_in_group("inventory").remove_item("cable")
-	is_custom_playing = false
-	$DoorSprite.play("opening")
-	$HydraulicsPlayer.play()
-	open = true
-	$StaticBody2D.queue_free()
-	#await $DoorSprite.animation_finished
-	$DoorSprite.play("open")
+
+func on_cutscene_signal(value: String):
+	if value == "fix_door":
+		get_tree().get_first_node_in_group("inventory").remove_item("cable")
+		is_custom_playing = false
+		$PanelSprite.play("fixed")
+		$DoorSprite.play("opening")
+		$HydraulicsPlayer.play()
+		await $DoorSprite.animation_finished
+		open = true
+		$StaticBody2D.queue_free()
+		$DoorSprite.play("open")
 
 func on_trigger_failed():
 	get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("open_security_door3_fail")

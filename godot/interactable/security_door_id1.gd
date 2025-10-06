@@ -20,19 +20,24 @@ func on_trigger():
 		get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("open_security_door1_already_open")
 		return
 	get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("open_security_door1")
-	$CardReaderSprite.play("accept")
-	$AcceptPlayer.play()
-	await get_tree().create_timer(0.3).timeout
-	$DoorSprite.play("opening")
-	$HydraulicsPlayer.play()
-	open = true
-	$StaticBody2D.queue_free()
-	await get_tree().create_timer(1).timeout
-	$DoorSprite.play("open")
 
 func on_trigger_failed():
-	$CardReaderSprite.play("reject")
-	$RejectPlayer.play()
 	get_tree().get_first_node_in_group("cutscene_conductor").start_cutscene("open_security_door1_fail")
-	await get_tree().create_timer(3).timeout
-	$CardReaderSprite.play("idle")
+	
+
+func on_cutscene_signal(value: String):
+	if value == "return_to_idle":
+		$CardReaderSprite.play("idle")
+	elif value == "reject_card":
+		$CardReaderSprite.play("reject")
+		$RejectPlayer.play()
+	elif value == "accept_card":
+		$CardReaderSprite.play("accept")
+		$AcceptPlayer.play()
+		await get_tree().create_timer(0.3).timeout
+		$DoorSprite.play("opening")
+		$HydraulicsPlayer.play()
+		open = true
+		$StaticBody2D.queue_free()
+		await get_tree().create_timer(1).timeout
+		$DoorSprite.play("open")

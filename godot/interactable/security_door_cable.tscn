@@ -40,16 +40,19 @@ shape = SubResource("RectangleShape2D_vse6a")
 position = Vector2(-16, -24)
 sprite_frames = ExtResource("3_rg2x4")
 animation = &"accept"
+autoplay = "accept"
 
 [node name="DoorSprite" type="AnimatedSprite2D" parent="." index="4"]
 position = Vector2(72, -32)
 sprite_frames = ExtResource("4_dfd60")
 animation = &"opening"
+autoplay = "opening"
 
 [node name="PanelSprite" type="AnimatedSprite2D" parent="." index="5"]
 position = Vector2(29, -25)
 sprite_frames = ExtResource("5_3u267")
 animation = &"broken"
+autoplay = "broken"
 
 [node name="Clinks" type="Node2D" parent="." index="6"]
 position = Vector2(72, -32)
